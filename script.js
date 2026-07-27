@@ -1,68 +1,10 @@
-// Girosto — static site interactions
-(function(){
-  const categories = [
-    ["Rice","🌾"],["Mustard Oil","🫙"],["Cooking Oils","🥥"],["Lentils & Pulses","🫘"],
-    ["Ground Spices","🌶️"],["Whole Spices","🧂"],["Sugar","🍬"],["Jaggery","🟤"],
-    ["Homemade Pickles","🥒"],["Seeds","🌱"],["Hair & Skin Care","🌿"],["Dairy & Poultry","🥚"],
-    ["Daily Needs","🛒"],["Girosto Special","✨"],["Honey","🍯"],["Dates & Dry Fruits","🌴"],
-    ["Nuts","🥜"],["Herb Powders","🍵"],["Health Items","💚"],["Fresh Fruits","🍎"]
-  ];
-  const bestSellers = [
-    {n:"Chinigura Aromatic Rice",p:"৳ 320 / kg",t:"Best Seller",e:"🌾"},
-    {n:"Cold-Pressed Mustard Oil",p:"৳ 480 / L",t:"Traditional",e:"🫙"},
-    {n:"Sundarban Wild Honey",p:"৳ 950 / 500g",t:"Wild Harvest",e:"🍯"},
-    {n:"Red Masoor Dal",p:"৳ 180 / kg",t:"Pantry",e:"🫘"}
-  ];
-  const faqs = [
-    ["Is organic food healthier than regular food?","Organic food may help reduce exposure to certain artificial additives and farming chemicals. Overall health also depends on food variety, portion size, and nutritional balance."],
-    ["How can I identify genuine organic products?","Check the product label, ingredients, source information, packaging, and available certifications. Buying from a trusted organic food shop with transparent product information reduces risk."],
-    ["Where can I buy organic food in Bangladesh?","You can purchase organic food from trusted physical stores, farms, and online shops. Girosto offers a convenient selection of organic groceries and daily essentials nationwide."],
-    ["Why is organic food more expensive?","Organic products may cost more because of smaller production volumes, natural farming methods, careful processing, and higher quality-control requirements."],
-    ["Does Girosto deliver across Bangladesh?","Girosto delivers within its available service areas across Bangladesh. Delivery time, cost, and product availability may vary depending on your location."]
-  ];
-
-  const catGrid = document.getElementById('categoryGrid');
-  if (catGrid) {
-    catGrid.innerHTML = categories.map(([name,emoji]) => `
-      <div class="col">
-        <a class="cat-card" href="#bestsellers" aria-label="Shop ${name}">
-          <span class="cat-emoji" aria-hidden="true">${emoji}</span>
-          <span class="fw-medium small">${name}</span>
-        </a>
-      </div>`).join('');
-  }
-
-  const bsGrid = document.getElementById('bestSellerGrid');
-  if (bsGrid) {
-    bsGrid.innerHTML = bestSellers.map(p => `
-      <div class="col-sm-6 col-lg-3">
-        <article class="product-card">
-          <div class="product-media">
-            <span aria-hidden="true">${p.e}</span>
-            <span class="tag">${p.t}</span>
-          </div>
-          <div class="product-body">
-            <h3>${p.n}</h3>
-            <p class="price">${p.p}</p>
-            <a href="https://wa.me/8801860963171?text=${encodeURIComponent('Hi Girosto, I would like to order: '+p.n)}" class="btn" rel="noopener">Order on WhatsApp</a>
-          </div>
-        </article>
-      </div>`).join('');
-  }
-
-  const acc = document.getElementById('faqAcc');
-  if (acc) {
-    acc.innerHTML = faqs.map(([q,a],i)=>`
-      <div class="accordion-item">
-        <h3 class="accordion-header" id="fh${i}">
-          <button class="accordion-button ${i===0?'':'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#fc${i}" aria-expanded="${i===0}" aria-controls="fc${i}">${q}</button>
-        </h3>
-        <div id="fc${i}" class="accordion-collapse collapse ${i===0?'show':''}" aria-labelledby="fh${i}" data-bs-parent="#faqAcc">
-          <div class="accordion-body text-muted">${a}</div>
-        </div>
-      </div>`).join('');
-  }
-
-  const y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
+﻿(function(){
+const categories=[["Rice","bi-basket2","BuyOrganicRiceOnlineinBangladeshGirosto.html"],["Mustard Oil","bi-droplet-half","BuyPureMustardOilOnlineinBangladeshGirosto.html"],["Healthy Oils","bi-moisture","BuyPremiumHealthyOilOnlineinBangladeshGirosto.html"],["Lentils & Pulses","bi-circle-half","BuyPremiumLentilsPulsesinBangladeshGirosto.html"],["Ground Spices","bi-fire","BuyPremiumGroundSpicesinBangladeshGirosto.html"],["Whole Spices","bi-stars","BuyPremiumWholeSpicesinBangladeshGirosto.html"],["Sugar","bi-hexagon","BuyPremiumSugarOnlineinBangladeshGirosto.html"],["Jaggery","bi-brightness-alt-high","BuyPremiumJaggeryinBangladeshGirosto.html"],["Homemade Pickles","bi-jar","HomemadePicklesinBangladeshGirosto.html"],["Healthy Seeds","bi-flower1","BuyPremiumHealthySeedsinBangladeshGirosto.html"],["Hair & Skin Care","bi-heart","HairskincareoilsinBangladeshGirosto.html"],["Dairy & Poultry","bi-egg","BuyPremiumDairyPoultryinBangladeshGirosto.html"],["Daily Needs","bi-bag-check","BuyDailyHealthyFoodinBangladesh.html"],["Girosto Special","bi-award","GirostoSpecialItemsinBangladesh.html"],["Original Honey","bi-droplet","OriginalHoneyinBangladesh.html"],["Dates & Dry Fruits","bi-sun","PremiumDatesDryFruitsinBangladesh.html"],["Premium Nuts","bi-nut","PremiumNutsinBangladesh.html"],["Herb Powders","bi-flower3","OrganicHerbPowderinBangladesh.html"],["Health Items","bi-activity","GenuineHealthItemsinBangladesh.html"],["Fresh Fruits","bi-apple","OrganicFreshFruitsinBangladesh.html"]];
+const products=[["Aromatic Rice","Naturally processed pantry staple","bi-basket2","BuyOrganicRiceOnlineinBangladeshGirosto.html"],["Cold-Pressed Mustard Oil","Traditional flavour for everyday cooking","bi-droplet-half","BuyPureMustardOilOnlineinBangladeshGirosto.html"],["Original Honey","Naturally sourced with authentic taste","bi-droplet","OriginalHoneyinBangladesh.html"],["Premium Nuts","Fresh crunch for snacks and recipes","bi-nut","PremiumNutsinBangladesh.html"]];
+const faqs=[["Is organic food healthier than regular food?","Organic food may help reduce exposure to certain artificial additives and farming chemicals. Overall health also depends on food variety, portion size, nutritional balance, and individual dietary needs."],["How can I identify genuine organic products?","Check the label, ingredients, source information, packaging, producer details, and available certifications. Transparent product information helps you make a better-informed choice."],["Where can I buy organic food in Bangladesh?","You can purchase from trusted physical stores, farms, and online shops. Girosto brings organic groceries, natural food items, and daily essentials together for customers in Bangladesh."],["Why is organic food more expensive?","Smaller production volumes, natural farming methods, careful processing, specialised sourcing, and quality-control requirements can affect the price."],["Does organic food contain pesticides?","Organic farming generally limits synthetic pesticides, though approved natural pest-control methods may be used. Review product sourcing details when needed."],["How should organic food be stored?","Keep dry foods in airtight containers in a cool, dry place. Dairy, fruits, and other perishable items may require refrigeration."],["Is organic food suitable for children?","Many organic foods can be part of a balanced, age-appropriate diet. Parents should consider allergies, nutritional needs, and professional medical advice."],["What organic products are popular in Bangladesh?","Common choices include rice, mustard oil, honey, lentils, spices, jaggery, seeds, nuts, dry fruits, herbal powders, and seasonal fruits."],["Does Girosto deliver across Bangladesh?","Delivery time, cost, and product availability vary by location and selected items. Contact our team to confirm service for your address."]];
+const grid=document.getElementById("categoryGrid");if(grid)grid.innerHTML=categories.map(c=>`<a class="cat-card" href="shop/category/${c[2]}"><i class="bi ${c[1]}" aria-hidden="true"></i><span>${c[0]}</span></a>`).join("");
+const productGrid=document.getElementById("bestSellerGrid");if(productGrid)productGrid.innerHTML=products.map(p=>`<div class="col-sm-6 col-lg-3"><article class="product-card"><div class="product-media"><span class="tag">Customer favourite</span><i class="bi ${p[2]}" aria-hidden="true"></i></div><div class="product-body"><h3>${p[0]}</h3><p>${p[1]}</p><a href="shop/category/${p[3]}">Explore collection <i class="bi bi-arrow-right"></i></a></div></article></div>`).join("");
+const faq=document.getElementById("faqAcc");if(faq)faq.innerHTML=faqs.map((f,i)=>`<div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button ${i?"collapsed":""}" type="button" data-bs-toggle="collapse" data-bs-target="#faq-${i}" aria-expanded="${!i}">${f[0]}</button></h3><div id="faq-${i}" class="accordion-collapse collapse ${i?"":"show"}" data-bs-parent="#faqAcc"><div class="accordion-body">${f[1]}</div></div></div>`).join("");
+const year=document.getElementById("year");if(year)year.textContent=new Date().getFullYear();
 })();
+
