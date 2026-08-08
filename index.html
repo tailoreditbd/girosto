@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -36,101 +36,74 @@
 <meta name="twitter:image" content="https://girostobd.github.io/assets/img/girosto-og-image.svg">
 <link rel="stylesheet" href="assets/css/commerce.css">
 <script src="assets/js/store.js" defer></script>
+<script src="assets/js/site-header.js" defer></script>
 <!-- shared:head:end -->
 </head>
 
-<body>
+<body class="home-page">
   <!-- shared:header:start -->
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="announcement">
-  <span>Pure choices for everyday living</span>
-  <span class="d-none d-md-inline">Nationwide delivery across Bangladesh</span>
-  <a href="tel:+8801860963171">+88 01860 963 171</a>
-</div>
-<header class="site-header sticky-top">
+<header class="site-header" id="siteHeader">
   <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
     <div class="container">
-      <a class="navbar-brand" href="index.html" aria-label="Girosto home"><img class="header-logo" src="assets/img/girosto-header-logo.svg" width="176" height="56" alt="Girosto"></a>
+      <a class="navbar-brand" href="index.html" aria-label="Girosto home">
+        <img class="header-logo header-logo-light" src="assets/img/girosto-header-logo.svg" width="176" height="56" alt="Girosto">
+        <img class="header-logo header-logo-dark" src="assets/img/girosto-header-logo.svg" width="176" height="56" alt="" aria-hidden="true">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="siteNav">
         <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="shop/index.html">Shop</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#categories">Categories</a></li>
-          <li class="nav-item"><a class="nav-link" href="about-us.html">Our story</a></li>
-          <li class="nav-item"><a class="nav-link" href="blog/HealthyLivingBlogGirosto.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-us.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog/HealthyLivingBlogGirosto.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
         </ul>
-        <form class="header-search" action="search.html" method="get" role="search">
-          <label class="visually-hidden" for="site-search">Search products</label>
-          <input id="site-search" name="q" type="search" placeholder="Search products" autocomplete="off">
-          <button type="submit" aria-label="Search"><i class="bi bi-search"></i></button>
-        </form>
-        <a class="cart-link" href="cart.html" aria-label="View shopping cart"><i class="bi bi-bag"></i><span data-cart-count>0</span></a>
+        <div class="header-actions">
+          <a class="header-icon-link" href="search.html" aria-label="Search products"><i class="bi bi-search"></i></a>
+          <a class="header-icon-link" href="contact-us.html" aria-label="Customer support"><i class="bi bi-person"></i></a>
+          <a class="cart-link" href="cart.html" aria-label="View shopping cart"><i class="bi bi-bag"></i><span data-cart-count>0</span></a>
+        </div>
       </div>
     </div>
   </nav>
 </header>
 <!-- shared:header:end -->
   <main id="main">
-    <section class="hero-slider" aria-label="Featured collections">
-      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6500">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0"
-            class="active" aria-current="true" aria-label="Safe food"></button>
-            <button type="button"
-            data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Best sellers"></button>
-            <!-- <button type="button"
-            data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="New arrivals"></button> -->
+    <section class="hero-slider girosto-hero" aria-label="Featured organic food collections">
+      <div class="hero-backgrounds" aria-hidden="true">
+        <div class="hero-background active"><img src="assets/img/hero/slider-1.webp" width="1600" height="1104" alt="" fetchpriority="high"></div>
+        <div class="hero-background"><img src="assets/img/hero/organic-food-shop-in-dhaka-bangladesh.webp" width="1600" height="1067" alt="" loading="lazy"></div>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <div id="heroCarousel" class="carousel slide carousel-fade hero-copy-carousel" data-bs-ride="carousel" data-bs-interval="6500">
+          <div class="carousel-indicators" aria-label="Featured Girosto collections">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Pure organic food"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Best-selling organic food"></button>
           </div>
-        <div class="carousel-inner">
-          <article class="carousel-item active"><img src="assets/img/hero/slider-1.webp" width="1600" height="1104"
-              alt="A table filled with rice, spices, lentils, oil and pantry food" fetchpriority="high">
-            <div class="hero-shade"></div>
-            <div class="container hero-content">
-              <p class="hero-kicker">100% organic food shop in Bangladesh</p>
-              <p class="hero-title">গিরোস্তেই আস্থা</p>
-              <p class="hero-copy">বিশুদ্ধ ও স্বাস্থ্যকর খাবারের মাধ্যমে গড়ে তুলুন একটি নিরাপদ পরিবার এবং নিশ্চিন্ত
-                আগামী। Girosto প্রতিদিনের খাদ্যতালিকায় নিয়ে আসে মানসম্মত ও বিশ্বস্ত পণ্যের সমাহার।</p>
-                <a class="btn btn-light btn-lg rounded-pill"
-                href="shop/index.html">এখনই কিনুন <i class="bi bi-arrow-up-right"></i></a>
-            </div>
-          </article>
-          <article class="carousel-item"><img src="assets/img/hero/organic-food-shop-in-dhaka-bangladesh.webp" width="1600" height="1067"
-              alt="Fresh seasonal produce gathered in a farm basket" loading="lazy">
-            <div class="hero-shade"></div>
-            <div class="container hero-content">
+          <div class="carousel-inner">
+            <article class="carousel-item active">
+              <p class="hero-kicker">100% pure &amp; natural</p>
+              <p class="hero-title">নিরাপদ খাবার,<br><em>সুস্থ জীবনের অঙ্গীকার</em></p>
+              <p class="hero-copy">বিশুদ্ধ ও স্বাস্থ্যকর খাবারের মাধ্যমে গড়ে তুলুন একটি নিরাপদ পরিবার এবং নিশ্চিন্ত আগামী। Girosto প্রতিদিনের খাদ্যতালিকায় নিয়ে আসে মানসম্মত ও বিশ্বস্ত পণ্যের সমাহার।</p>
+              <a class="btn hero-shop-btn" href="shop/index.html">এখনই কিনুন <i class="bi bi-arrow-right"></i></a>
+            </article>
+            <article class="carousel-item">
               <p class="hero-kicker">Chosen by families across Bangladesh</p>
               <p class="hero-title">সবচেয়ে প্রিয়<br><em>অর্গানিক পণ্যগুলো</em></p>
-              <p class="hero-copy">সরিষার তেল থেকে মধু, চাল থেকে মসলা—বাংলাদেশের হাজারো পরিবার যা বেছে নিচ্ছে বারবার,
-                সেটাই এখন আপনার সামনে। মান আর বিশুদ্ধতায় কোনো আপস নেই! </p><a class="btn btn-light btn-lg rounded-pill"
-                href="#bestsellers">Best পণ্যগুলো দেখুন  <i class="bi bi-arrow-up-right"></i></a>
-            </div>
-          </article>
-          <!-- <article class="carousel-item"><img src="assets/farmer-hands.jpg" width="1600" height="1067"
-              alt="A farmer holding freshly harvested organic produce" loading="lazy">
-            <div class="hero-shade"></div>
-            <div class="container hero-content">
-              <p class="hero-kicker">Freshly sourced</p>
-              <p class="hero-title">নতুন কী এলো<br><em> Girosto-তে?</em></p>
-              <p class="hero-copy">তাজা অর্গানিক পণ্য, মৌসুমি আইটেম আর ওয়েলনেসের নতুন সংযোজন—আপনার রান্নাঘরে একটু নতুনত্ব আনার সময় হয়েছে। কে জানে, পরবর্তী প্রিয় জিনিসটা হয়তো এখানেই! </p>
-              <a class="btn btn-light btn-lg rounded-pill" href="#new-arrivals"> নতুন আইটেম দেখুন<i class="bi bi-arrow-up-right"></i></a>
-            </div>
-          </article> -->
+              <p class="hero-copy">সরিষার তেল থেকে মধু, চাল থেকে মসলা—বাংলাদেশের হাজারো পরিবার যা বেছে নিচ্ছে বারবার, সেটাই এখন আপনার সামনে। মান আর বিশুদ্ধতায় কোনো আপস নেই।</p>
+              <a class="btn hero-shop-btn" href="#bestsellers">Best পণ্যগুলো দেখুন <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
         </div>
       </div>
-    </section>
-    <section class="trust-strip" aria-label="Girosto benefits">
-      <div class="container">
-        <div class="trust-grid">
-          <div><i class="bi bi-patch-check"></i><span><b>Carefully selected</b><small>Trusted, quality-focused
-                sourcing</small></span></div>
-          <div><i class="bi bi-flower2"></i><span><b>Farm connected</b><small>Responsible suppliers
-                nationwide</small></span></div>
-          <div><i class="bi bi-box2-heart"></i><span><b>Thoughtfully packed</b><small>Freshness and clarity in every
-                order</small></span></div>
-          <div><i class="bi bi-truck"></i><span><b>Reliable delivery</b><small>Available service areas in
-                Bangladesh</small></span></div>
-        </div>
+      <div class="hero-trust container" aria-label="Why families choose Girosto">
+        <div><i class="bi bi-patch-check"></i><span><b>Carefully selected</b><small>Quality-focused sourcing</small></span></div>
+        <div><i class="bi bi-flower2"></i><span><b>Farm connected</b><small>Responsible suppliers</small></span></div>
+        <div><i class="bi bi-box2-heart"></i><span><b>Thoughtfully packed</b><small>Freshness in every order</small></span></div>
+        <div><i class="bi bi-truck"></i><span><b>Reliable delivery</b><small>Across Bangladesh</small></span></div>
       </div>
     </section>
     <section class="section-space">

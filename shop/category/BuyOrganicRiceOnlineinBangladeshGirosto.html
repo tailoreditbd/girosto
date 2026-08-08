@@ -10,34 +10,33 @@
 <meta name="twitter:image" content="https://girostobd.github.io/assets/img/girosto-og-image.svg">
 <link rel="stylesheet" href="../../assets/css/commerce.css">
 <script src="../../assets/js/store.js" defer></script>
+<script src="../../assets/js/site-header.js" defer></script>
 <!-- shared:head:end -->
 </head><body data-category="BuyOrganicRiceOnlineinBangladeshGirosto.html">
 <!-- shared:header:start -->
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="announcement">
-  <span>Pure choices for everyday living</span>
-  <span class="d-none d-md-inline">Nationwide delivery across Bangladesh</span>
-  <a href="tel:+8801860963171">+88 01860 963 171</a>
-</div>
-<header class="site-header sticky-top">
+<header class="site-header" id="siteHeader">
   <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
     <div class="container">
-      <a class="navbar-brand" href="../../index.html" aria-label="Girosto home"><img class="header-logo" src="../../assets/img/girosto-header-logo.svg" width="176" height="56" alt="Girosto"></a>
+      <a class="navbar-brand" href="../../index.html" aria-label="Girosto home">
+        <img class="header-logo header-logo-light" src="../../assets/img/girosto-header-logo.svg" width="176" height="56" alt="Girosto">
+        <img class="header-logo header-logo-dark" src="../../assets/img/girosto-header-logo.svg" width="176" height="56" alt="" aria-hidden="true">
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav" aria-controls="siteNav" aria-expanded="false" aria-label="Open menu"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="siteNav">
         <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="../../shop/index.html">Shop</a></li>
           <li class="nav-item"><a class="nav-link" href="../../index.html#categories">Categories</a></li>
-          <li class="nav-item"><a class="nav-link" href="../../about-us.html">Our story</a></li>
-          <li class="nav-item"><a class="nav-link" href="../../blog/HealthyLivingBlogGirosto.html">Journal</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../about-us.html">About us</a></li>
+          <li class="nav-item"><a class="nav-link" href="../../blog/HealthyLivingBlogGirosto.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="../../contact-us.html">Contact</a></li>
         </ul>
-        <form class="header-search" action="../../search.html" method="get" role="search">
-          <label class="visually-hidden" for="site-search">Search products</label>
-          <input id="site-search" name="q" type="search" placeholder="Search products" autocomplete="off">
-          <button type="submit" aria-label="Search"><i class="bi bi-search"></i></button>
-        </form>
-        <a class="cart-link" href="../../cart.html" aria-label="View shopping cart"><i class="bi bi-bag"></i><span data-cart-count>0</span></a>
+        <div class="header-actions">
+          <a class="header-icon-link" href="../../search.html" aria-label="Search products"><i class="bi bi-search"></i></a>
+          <a class="header-icon-link" href="../../contact-us.html" aria-label="Customer support"><i class="bi bi-person"></i></a>
+          <a class="cart-link" href="../../cart.html" aria-label="View shopping cart"><i class="bi bi-bag"></i><span data-cart-count>0</span></a>
+        </div>
       </div>
     </div>
   </nav>
