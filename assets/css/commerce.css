@@ -148,3 +148,27 @@ button[aria-busy="true"]{cursor:wait;opacity:.72}
 @media(max-width:430px){
   .girosto-hero .hero-title{max-width:100%;font-size:2.35rem;letter-spacing:-.035em}
 }
+/* Invoice, pantry caption, and logo correction */
+.home-page .site-header:not(.scrolled) .header-logo-light{filter:none}
+.intro-visual figcaption{position:relative;z-index:1;margin-top:1rem;color:var(--muted);font-size:.76rem;line-height:1.5}
+.invoice-card{max-width:900px;margin:2.5rem auto 0;border:1px solid var(--line);border-radius:1rem;background:#fff;padding:clamp(1.25rem,4vw,2.5rem);text-align:left;box-shadow:0 18px 55px rgba(25,38,31,.08)}
+.invoice-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;padding-bottom:1.3rem;border-bottom:2px solid var(--green)}
+.invoice-heading p{margin:0}.invoice-brand{font-family:"Fraunces",Georgia,serif;font-size:1.75rem!important;font-weight:700;color:var(--green)}
+.invoice-heading>div:last-child{text-align:right}.invoice-heading>div:last-child span,.invoice-meta span,.invoice-customer h2{display:block;color:var(--muted);font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.invoice-heading>div:last-child strong{display:block;margin-top:.35rem}
+.invoice-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:1.25rem 0;border-bottom:1px solid var(--line)}
+.invoice-meta div{display:flex;flex-direction:column;gap:.2rem}.invoice-meta strong{font-size:.86rem}
+.invoice-customer{padding:1.35rem 0}.invoice-customer h2{margin:0 0 .55rem;font-family:"DM Sans",sans-serif}.invoice-customer p{margin:0;color:var(--ink);line-height:1.65}
+.invoice-table-wrap{overflow-x:auto}.invoice-table{width:100%;border-collapse:collapse}.invoice-table th,.invoice-table td{padding:.85rem;border-bottom:1px solid var(--line);vertical-align:top}.invoice-table th{background:var(--cream);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase}.invoice-table th:nth-child(n+2),.invoice-table td:nth-child(n+2){text-align:right}.invoice-table small{display:block;margin-top:.2rem;color:var(--muted)}
+.invoice-totals{width:min(380px,100%);margin:1.4rem 0 1.4rem auto}.invoice-totals div{display:flex;justify-content:space-between;gap:2rem;padding:.38rem 0}.invoice-grand-total{margin-top:.45rem;padding-top:.8rem!important;border-top:2px solid var(--green);font-size:1.12rem}
+.invoice-notes{padding-top:1rem;border-top:1px solid var(--line);color:var(--muted)}.invoice-footer{padding-top:1rem;border-top:1px solid var(--line);color:var(--muted);font-size:.75rem;text-align:center}
+.invoice-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.75rem;margin-top:1.5rem}
+@media(max-width:767px){.invoice-heading{flex-direction:column}.invoice-heading>div:last-child{text-align:left}.invoice-meta{grid-template-columns:1fr}.invoice-card{border-radius:.75rem}.invoice-table{min-width:620px}}
+@media print{
+  @page{margin:14mm}
+  body{background:#fff!important}
+  .site-header,.site-footer,.wa-float,.invoice-actions,.success-icon,.order-success>.section-kicker,.order-success>h1,.order-success>p{display:none!important}
+  .commerce-section{padding:0!important}
+  #orderComplete,.order-success{max-width:none!important;width:100%!important;margin:0!important;padding:0!important}
+  .invoice-card{max-width:none;margin:0;border:0;border-radius:0;padding:0;box-shadow:none}
+}

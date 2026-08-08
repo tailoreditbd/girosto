@@ -11,11 +11,11 @@
   function render() {
     const lines = GirostoStore.resolved();
     if (!lines.length) {
-      location.href = "cart.html";
+      location.href = "cart";
       return;
     }
     const totals = GirostoStore.totals(delivery());
-    summary.innerHTML = `<h2 class="h4">Your order</h2>${lines.map(line => `<div class="summary-line"><span>${line.product.name} x ${line.qty}<small class="d-block text-muted">${line.variant.size}</small></span><strong>${GirostoStore.money(line.lineTotal)}</strong></div>`).join("")}<div class="summary-line border-top mt-2 pt-3"><span>Subtotal</span><strong>${GirostoStore.money(totals.subtotal)}</strong></div><div class="summary-line"><span>Delivery</span><strong>${totals.delivery ? GirostoStore.money(totals.delivery) : "To be confirmed"}</strong></div><div class="summary-line summary-total"><span>Product total</span><span>${GirostoStore.money(totals.total)}</span></div><p class="checkout-note mt-3">Cash on delivery. A Girosto representative may call to confirm availability and delivery details.</p>`;
+    summary.innerHTML = `<h2 class="h4">Your order</h2>${lines.map(line => `<div class="summary-line"><span>${line.product.name} x ${line.qty}<small class="d-block text-muted">${line.variant.size}</small></span><strong>${GirostoStore.money(line.lineTotal)}</strong></div>`).join("")}<div class="summary-line border-top mt-2 pt-3"><span>Subtotal</span><strong>${GirostoStore.money(totals.subtotal)}</strong></div><div class="summary-line"><span>Delivery</span><strong>${totals.delivery ? GirostoStore.money(totals.delivery) : "Select an area"}</strong></div><div class="summary-line summary-total"><span>Grand total</span><span>${GirostoStore.money(totals.total)}</span></div><p class="checkout-note mt-3">Cash on delivery. A Girosto representative may call to confirm availability and delivery details.</p>`;
   }
 
   form.elements.deliveryArea.addEventListener("change", render);
@@ -30,6 +30,7 @@
     const button = form.querySelector('[type="submit"]');
     const values = Object.fromEntries(new FormData(form).entries());
     if (values.website) return;
+
     pendingReference = pendingReference || `GIR-${new Date().toISOString().slice(0, 10).replaceAll("-", "")}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
     const items = lines.map(line => ({
       id: line.id,
@@ -39,12 +40,12 @@
       qty: line.qty,
       lineTotal: line.lineTotal
     }));
-    const selectedDelivery = form.elements.deliveryArea.selectedOptions[0]?.textContent.trim() || "Delivery charge to be confirmed";
+    const selectedDelivery = form.elements.deliveryArea.selectedOptions[0]?.textContent.trim() || "";
     const customer = {
       name: values.name.trim(),
       phone: values.phone.trim(),
       email: values.email.trim(),
-      deliveryArea: values.deliveryArea,
+      deliveryArea: selectedDelivery,
       area: values.area.trim(),
       address: values.address.trim(),
       notes: values.notes.trim()
@@ -63,7 +64,7 @@
     button.setAttribute("aria-busy", "true");
     if (status) {
       status.className = "form-status is-pending";
-      status.textContent = "Saving your order securely…";
+      status.textContent = "Saving your order securely...";
     }
 
     try {
@@ -74,7 +75,7 @@
         customerName: customer.name,
         phone: customer.phone,
         email: customer.email,
-        deliveryArea: `${customer.area} — ${selectedDelivery}`,
+        deliveryArea: `${selectedDelivery}; District/area: ${customer.area}`,
         address: customer.address,
         notes: customer.notes,
         paymentMethod: order.payment,
@@ -88,7 +89,7 @@
       });
       localStorage.setItem(GirostoStore.ORDER_KEY, JSON.stringify(order));
       GirostoStore.clear();
-      location.href = `order-complete.html?order=${encodeURIComponent(order.reference)}`;
+      location.href = `order-complete?order=${encodeURIComponent(order.reference)}`;
     } catch (error) {
       if (status) {
         status.className = "form-status is-error";

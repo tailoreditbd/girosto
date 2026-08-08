@@ -57,3 +57,5 @@ for (const file of htmlFiles(root)) {
 }
 
 console.log("Built shared head, header, and footer into every public HTML page.");
+
+require("./build-clean-urls");
