@@ -3,3 +3,15 @@
 @media(max-width:991px){.navbar-collapse{padding:1rem 0}.nav-action{margin-top:.75rem}.hero-slider,.carousel-item{height:690px}.trust-grid{grid-template-columns:1fr 1fr}.trust-grid>div:nth-child(2){border-right:0}.category-grid{grid-template-columns:repeat(3,1fr)}.footer-grid{grid-template-columns:1.5fr 1fr 1fr}.footer-grid>div:last-child{grid-column:1/-1}.category-content .category-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:767px){.announcement{justify-content:space-between}.navbar{min-height:68px}.hero-slider,.carousel-item{height:650px;min-height:650px}.hero-shade{background:rgba(10,25,17,.67)}.hero-content{width:100%;padding:0 1.5rem}.hero-copy{font-size:.95rem}.carousel-control-prev,.carousel-control-next{display:none}.trust-grid{grid-template-columns:1fr}.trust-grid>div{border-right:0;border-bottom:1px solid var(--line)}.section-heading{align-items:start;flex-direction:column}.category-grid,.category-content .category-grid{grid-template-columns:1fr 1fr}.feature-panel img,.story-image{height:340px}.feature-copy{padding:1rem 0}.reason-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child,.footer-grid>div:last-child{grid-column:1/-1}.footer-bottom{flex-direction:column}.page-hero{padding:3.5rem 0}}
 @media(max-width:430px){.category-grid,.category-content .category-grid{grid-template-columns:1fr}.cat-card{min-height:105px}}
+
+/* Brand assets and revised homepage presentation */
+.header-logo{display:block;width:auto;height:54px;max-width:min(176px,52vw)}
+.footer-brand{display:inline-block}.footer-logo{display:block;width:auto;height:62px;max-width:210px}
+.hero-title{max-width:800px;font-family:"Fraunces",Georgia,serif;font-size:clamp(2.75rem,6vw,5.9rem);font-weight:600;line-height:.98;letter-spacing:-.04em;margin:.6rem 0 1.4rem}
+.hero-title em{color:#e4bd69;font-weight:500}
+.carousel-indicators{justify-content:center;margin-right:15%;margin-left:15%}
+.carousel-control-prev,.carousel-control-next{display:none!important}
+.intro-visual{position:relative}
+.intro-visual:before{content:"";position:absolute;inset:1.1rem -1rem -1.1rem 1rem;border-radius:1.5rem;background:var(--sage);z-index:0}
+.intro-visual img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:1.5rem;box-shadow:var(--shadow)}
+@media(max-width:991px){.intro-visual{max-width:620px;margin-inline:auto}.header-logo{height:48px}}
