@@ -4,6 +4,31 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /girosto/
 
+# Permanently migrate legacy product-code URLs to English product slugs.
+RewriteRule ^shop/product/(g-[0-9]+(?:-[0-9]+)?)(?:\.html)?$ product-redirect.php?id=$1 [L,QSA,NC]
+
+# Legacy category URLs: permanently redirect to concise SEO slugs.
+RewriteRule ^shop/category/BuyOrganicRiceOnlineinBangladeshGirosto(?:\.html)?$ shop/category/rice [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPureMustardOilOnlineinBangladeshGirosto(?:\.html)?$ shop/category/mustard-oil [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumHealthyOilOnlineinBangladeshGirosto(?:\.html)?$ shop/category/healthy-oils [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumLentilsPulsesinBangladeshGirosto(?:\.html)?$ shop/category/lentils-pulses [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumGroundSpicesinBangladeshGirosto(?:\.html)?$ shop/category/ground-spices [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumWholeSpicesinBangladeshGirosto(?:\.html)?$ shop/category/whole-spices [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumSugarOnlineinBangladeshGirosto(?:\.html)?$ shop/category/sugar [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumJaggeryinBangladeshGirosto(?:\.html)?$ shop/category/jaggery [R=301,L,NE,NC]
+RewriteRule ^shop/category/HomemadePicklesinBangladeshGirosto(?:\.html)?$ shop/category/homemade-pickles [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumHealthySeedsinBangladeshGirosto(?:\.html)?$ shop/category/healthy-seeds [R=301,L,NE,NC]
+RewriteRule ^shop/category/HairskincareoilsinBangladeshGirosto(?:\.html)?$ shop/category/hair-skin-care [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyPremiumDairyPoultryinBangladeshGirosto(?:\.html)?$ shop/category/dairy-poultry [R=301,L,NE,NC]
+RewriteRule ^shop/category/BuyDailyHealthyFoodinBangladesh(?:\.html)?$ shop/category/daily-needs [R=301,L,NE,NC]
+RewriteRule ^shop/category/GirostoSpecialItemsinBangladesh(?:\.html)?$ shop/category/girosto-special [R=301,L,NE,NC]
+RewriteRule ^shop/category/OriginalHoneyinBangladesh(?:\.html)?$ shop/category/honey [R=301,L,NE,NC]
+RewriteRule ^shop/category/PremiumDatesDryFruitsinBangladesh(?:\.html)?$ shop/category/dates-dry-fruits [R=301,L,NE,NC]
+RewriteRule ^shop/category/PremiumNutsinBangladesh(?:\.html)?$ shop/category/nuts [R=301,L,NE,NC]
+RewriteRule ^shop/category/OrganicHerbPowderinBangladesh(?:\.html)?$ shop/category/herb-powders [R=301,L,NE,NC]
+RewriteRule ^shop/category/GenuineHealthItemsinBangladesh(?:\.html)?$ shop/category/health-items [R=301,L,NE,NC]
+RewriteRule ^shop/category/OrganicFreshFruitsinBangladesh(?:\.html)?$ shop/category/fresh-fruits [R=301,L,NE,NC]
+
 # Redirect direct .html requests to their public extensionless URL.
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
 RewriteRule ^(.*/)?index\.html$ $1 [R=301,L,NE]

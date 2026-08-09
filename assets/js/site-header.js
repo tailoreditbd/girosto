@@ -20,4 +20,19 @@
 
   activateBackground(carousel.querySelector(".carousel-item.active"));
   carousel.addEventListener("slide.bs.carousel", event => activateBackground(event.relatedTarget));
+
+  const startAutoplay = () => {
+    if (!window.bootstrap?.Carousel) return;
+    const instance = window.bootstrap.Carousel.getOrCreateInstance(carousel, {
+      interval: 6000,
+      pause: false,
+      ride: "carousel",
+      touch: true,
+      wrap: true
+    });
+    instance.cycle();
+  };
+
+  if (window.bootstrap?.Carousel) startAutoplay();
+  else window.addEventListener("load", startAutoplay, { once: true });
 })();
