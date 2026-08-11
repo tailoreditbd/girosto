@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://girostobd.github.io/sitemap.xml
+Sitemap: https://www.girosto.com/sitemap.xml

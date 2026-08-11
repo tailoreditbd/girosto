@@ -31,7 +31,7 @@ for (const file of htmlFiles(root)) {
   let output = source.replace(/\b(href|action)=(['"])([^'"]+)\2/gi, (full, attribute, quote, url) => {
     return `${attribute}=${quote}${cleanUrl(url)}${quote}`;
   });
-  output = output.replace(/https:\/\/girostobd\.github\.io(\/[^"'<>\s]*?)\.html\b/g, "https://girostobd.github.io$1");
+  output = output.replace(/https:\/\/www\.girosto\.com(\/[^"'<>\s]*?)\.html\b/g, "https://www.girosto.com$1");
   if (output !== source) {
     fs.writeFileSync(file, output, "utf8");
     changed += 1;

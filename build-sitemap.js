@@ -1,7 +1,7 @@
 const fs=require("fs");
 const path=require("path");
 const root=__dirname;
-const base="https://girostobd.github.io";
+const base="https://www.girosto.com";
 const urls=["/","/shop/","/about-us","/contact-us","/delivery-policy","/privacy-policy","/refund-and-replacement-policy-girosto","/blog/HealthyLivingBlogGirosto"];
 const clean=file=>file.replace(/\.html$/,"");
 for(const file of fs.readdirSync(path.join(root,"shop","category")).filter(file=>file.endsWith(".html")).sort())urls.push(`/shop/category/${clean(file)}`);

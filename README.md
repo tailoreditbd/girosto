@@ -10,13 +10,13 @@ A lookalike static build of the Girosto homepage, ready for **GitHub Pages**.
 - `robots.txt`, `sitemap.xml` — crawler directives.
 
 ## Deploy on GitHub Pages
-1. Create a repo (e.g. `girostobd.github.io` for a user site, or any repo for a project site).
+1. Create a repo (e.g. `username.github.io` for a user site, or any repo for a project site).
 2. Copy the contents of this folder to the repo root.
 3. Push to the `main` branch.
 4. In **Settings → Pages**, set **Source = Deploy from a branch**, branch `main`, folder `/ (root)`.
 5. Your site will be live at `https://<user-or-org>.github.io/` (or `https://<user>.github.io/<repo>/`).
 
-If you use a project-site URL, replace every `https://girostobd.github.io/` occurrence in `index.html`, `robots.txt` and `sitemap.xml` with your real base URL, and update the `<link rel="canonical">` accordingly.
+If you use a project-site URL, replace every `https://www.girosto.com/` occurrence in `index.html`, `robots.txt` and `sitemap.xml` with your real base URL, and update the `<link rel="canonical">` accordingly.
 
 ## Analytics & Verification
 Inside `<head>` in `index.html` you'll find commented placeholders — uncomment and paste your IDs:
