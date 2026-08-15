@@ -9,7 +9,8 @@ let content = fs.readFileSync(path.join(root, "partials", "home-categories.html"
 content = content
   .replaceAll("shared:home-categories", "shared:shop-categories")
   .replace('id="categoryGrid"', 'id="shopCategoryGrid"')
-  .replaceAll('href="shop/category/', 'href="category/');
+  .replaceAll('href="shop/category/', 'href="category/')
+  .replaceAll('src="assets/img/category/', 'src="../assets/img/category/');
 
 const marked = /<!-- shared:shop-categories:start -->[\s\S]*?<!-- shared:shop-categories:end -->/i;
 const fallback = /<div id="shopCategoryGrid" class="category-grid"><\/div>/i;
