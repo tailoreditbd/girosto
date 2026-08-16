@@ -10,7 +10,8 @@ content = content
   .replaceAll("shared:home-categories", "shared:shop-categories")
   .replace('id="categoryGrid"', 'id="shopCategoryGrid"')
   .replaceAll('href="shop/category/', 'href="category/')
-  .replaceAll('src="assets/img/category/', 'src="../assets/img/category/');
+  .replaceAll('src="assets/img/category/', 'src="../assets/img/category/')
+  .replaceAll('src="assets/js/category-carousel.js"', 'src="../assets/js/category-carousel.js"');
 
 const marked = /<!-- shared:shop-categories:start -->[\s\S]*?<!-- shared:shop-categories:end -->/i;
 const fallback = /<div id="shopCategoryGrid" class="category-grid"><\/div>/i;

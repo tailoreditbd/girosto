@@ -50,6 +50,9 @@ function htmlFiles(dir) {
 for (const file of htmlFiles(root)) {
   const prefix = pageRoot(file);
   let html = fs.readFileSync(file, "utf8");
+  html = html.replace(/\s*<link rel="preconnect" href="https:\/\/fonts\.googleapis\.com"[^>]*>/gi, "");
+  html = html.replace(/\s*<link rel="preconnect" href="https:\/\/fonts\.gstatic\.com"[^>]*>/gi, "");
+  html = html.replace(/\s*<link[^>]+href="https:\/\/fonts\.googleapis\.com\/css2[^\"]*"[^>]*>/gi, "");
   html = replaceRegion(html, "head", render(shared.head, prefix));
   html = replaceRegion(html, "header", render(shared.header, prefix));
   html = replaceRegion(html, "footer", render(shared.footer, prefix));
