@@ -38,3 +38,18 @@
   .category-carousel-arrow{width:34px;height:34px}
 }
 @media(prefers-reduced-motion:reduce){.category-carousel-viewport{scroll-behavior:auto}.category-carousel .cat-card-image{transition:none}}
+/* Larger category carousel cards and centred homepage actions */
+.category-carousel .category-grid{gap:.9rem}
+.category-carousel .cat-card{flex-basis:148px;padding:.7rem;border-radius:1.05rem}
+.category-carousel .cat-card-image{width:108px;height:108px}
+.category-carousel .cat-card span{min-height:46px;font-size:.94rem}
+.category-actions,.bestseller-actions{display:flex;justify-content:center;margin-top:1.6rem}
+.faq-heading{max-width:820px;margin-bottom:2.75rem}
+.faq-heading>p:last-child{margin:1rem 0 0;color:var(--muted)}
+.faq-accordion-wrap{max-width:920px}
+.footer-bottom{align-items:center;flex-wrap:wrap}
+.footer-credit{display:inline-flex!important;align-items:center;justify-content:center;gap:.35rem}
+.footer-credit i{color:var(--orange);font-size:.72rem}
+.footer-bottom .footer-credit a{color:#fff;text-decoration:none;font-weight:700}
+.footer-bottom .footer-credit a:hover{color:#e7c477}
+@media(max-width:767px){.category-carousel .cat-card{flex-basis:118px;padding:.5rem}.category-carousel .cat-card-image{width:84px;height:84px}.category-carousel .cat-card span{min-height:40px;font-size:.82rem}.faq-heading{margin-bottom:2rem}.footer-credit{justify-content:flex-start}}
