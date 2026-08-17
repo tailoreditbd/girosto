@@ -31,7 +31,9 @@ fs.writeFileSync(path.join(root,"assets","js","products.js"),`window.GIROSTO_CAT
 
 const indexFile=path.join(root,"index.html");
 let home=fs.readFileSync(indexFile,"utf8");
-const featured=products.filter(item=>item.featured).slice(0,4);
+const homeBestSellerIds=["g-008","g-026","g-094","g-095","g-123","g-088","g-119","g-093","g-032","g-190","g-111","g-114"];
+const featured=homeBestSellerIds.map(id=>products.find(item=>item.id===id));
+if(featured.some(item=>!item))throw new Error("A configured homepage bestseller is missing from the catalog.");
 const homeProducts=`<!-- shared:home-bestsellers:start -->\n<div id="bestSellerGrid" class="commerce-grid">${featured.map(item=>card(item,"")).join("")}</div>\n<!-- shared:home-bestsellers:end -->`;
 home=home.replace(/<!-- shared:home-bestsellers:start -->[\s\S]*?<!-- shared:home-bestsellers:end -->/i,homeProducts);
 home=addCatalogScript(home,"");
