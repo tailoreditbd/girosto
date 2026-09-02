@@ -50,7 +50,9 @@ fs.writeFileSync(shopFile,shop,"utf8");
 for(const category of catalog.categories){
   const file=path.join(root,"shop","category",category.file);if(!fs.existsSync(file))continue;
   let html=fs.readFileSync(file,"utf8");const items=products.filter(item=>item.category===category.slug);
-  const section=`<section class="commerce-section category-products" id="products"><div class="container"><div class="section-heading"><div><p class="section-kicker">Available products</p><h2 class="section-title">Shop ${esc(category.name)}</h2></div><span class="catalog-count">${items.length} products</span></div><div class="commerce-grid mt-5">${items.map(item=>card(item,"../../")).join("")}</div></div></section>`;
+  const categoryTitle=category.slug==="rice"?"Premium rice collection at Girosto":`Shop ${esc(category.name)}`;
+  const categoryLead=category.slug==="rice"?`<p class="section-lead"><strong>Girosto</strong> offers a quality <strong>rice</strong> collection selected to meet different cooking preferences, dietary needs, and household requirements. Explore naturally sourced <strong>rice</strong> with excellent texture, authentic flavor, and consistent cooking results.</p>`:"";
+  const section=`<section class="commerce-section category-products" id="products"><div class="container"><div class="section-heading"><div><p class="section-kicker">Available products</p><h2 class="section-title">${categoryTitle}</h2></div><span class="catalog-count">${items.length} products</span></div>${categoryLead}<div class="commerce-grid mt-5">${items.map(item=>card(item,"../../")).join("")}</div></div></section>`;
   const browser=`<section class="commerce-section category-browser" aria-labelledby="allCategoryTitle"><div class="container"><div class="section-heading"><div><p class="section-kicker">Browse the pantry</p><h2 class="section-title" id="allCategoryTitle">Explore all categories</h2></div></div><div class="mt-4">${categoryCarousel("../../")}</div></div></section>`;
   html=placeAfterPageHero(html,"category-products",section);html=replaceRegion(html,"category-browser",browser);html=addCatalogScript(html,"../../");fs.writeFileSync(file,html,"utf8");
 }
