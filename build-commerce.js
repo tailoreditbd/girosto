@@ -52,7 +52,8 @@ for(const category of catalog.categories){
   let html=fs.readFileSync(file,"utf8");const items=products.filter(item=>item.category===category.slug);
   const categoryCopy={
     rice:{title:"Premium rice collection at Girosto",lead:`<p class="section-lead"><strong>Girosto</strong> offers a quality <strong>rice</strong> collection selected to meet different cooking preferences, dietary needs, and household requirements. Explore naturally sourced <strong>rice</strong> with excellent texture, authentic flavor, and consistent cooking results.</p>`},
-    "mustard-oil":{title:"Mustard oil collection at Girosto",lead:`<p class="section-lead">Explore <strong>Girosto&rsquo;s</strong> collection of pure <strong>mustard oil</strong> prepared to retain its natural aroma, strong flavor, and traditional characteristics. Choose from different processing methods and trusted options according to your cooking needs.</p>`}
+    "mustard-oil":{title:"Mustard oil collection at Girosto",lead:`<p class="section-lead">Explore <strong>Girosto&rsquo;s</strong> collection of pure <strong>mustard oil</strong> prepared to retain its natural aroma, strong flavor, and traditional characteristics. Choose from different processing methods and trusted options according to your cooking needs.</p>`},
+    "healthy-oils":{title:"Premium healthy oil collection at Girosto",lead:`<p class="section-lead">Explore <strong>Girosto&rsquo;s</strong> collection of <strong>premium oils</strong> selected for different recipes, cooking temperatures, and household preferences. Choose the most suitable olive, sunflower, or coconut oil based on your cooking style and daily requirements.</p>`}
   };
   const categoryTitle=categoryCopy[category.slug]?.title||`Shop ${esc(category.name)}`;
   const categoryLead=categoryCopy[category.slug]?.lead||"";
