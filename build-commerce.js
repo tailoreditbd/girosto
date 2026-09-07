@@ -75,7 +75,7 @@ for(const category of catalog.categories){
   const categoryTitle=categoryCopy[category.slug]?.title||`Shop ${esc(category.name)}`;
   const categoryLead=categoryCopy[category.slug]?.lead||"";
   const section=`<section class="commerce-section category-products" id="products"><div class="container"><div class="section-heading"><div><p class="section-kicker">Available products</p><h2 class="section-title">${categoryTitle}</h2></div><span class="catalog-count">${items.length} products</span></div>${categoryLead}<div class="commerce-grid mt-5">${items.map(item=>card(item,"../../")).join("")}</div></div></section>`;
-  html=placeAfterPageHero(html,"category-products",section);html=html.replace(/<section class="category-content">[\s\S]*?<\/section>/i,"");html=html.replace(/<!-- commerce:category-browser:start -->[\s\S]*?<!-- commerce:category-browser:end -->/i,"");html=addCatalogScript(html,"../../");fs.writeFileSync(file,html,"utf8");
+  html=placeAfterPageHero(html,"category-products",section);if(category.slug!=="rice")html=html.replace(/<section class="category-content">[\s\S]*?<\/section>/i,"");html=html.replace(/<!-- commerce:category-browser:start -->[\s\S]*?<!-- commerce:category-browser:end -->/i,"");html=addCatalogScript(html,"../../");fs.writeFileSync(file,html,"utf8");
 }
 
 const productDir=path.join(root,"shop","product");fs.mkdirSync(productDir,{recursive:true});
