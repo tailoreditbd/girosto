@@ -63,7 +63,44 @@
   <script src="../../assets/js/site-header.js" defer></script>
 
   <style>
-   
+   /* প্রতিটি Heading-এর আলাদা সাইজ সেটআপ */
+h1 {
+  font-size: 36px !important;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 32px !important;
+  font-weight: 600;
+}
+
+/* FAQ ছাড়া সাধারণ h3-এর সাইজ */
+h3:not(.accordion-header) {
+  font-size: 24px !important;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 18px !important;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 15px !important;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 14px !important;
+  font-weight: 600;
+}
+
+/* মোবাইল ডিভাইসের জন্য সাইজ অ্যাডজাস্টমেন্ট */
+@media (max-width: 767px) {
+  h1 { font-size: 24px !important; }
+  h2 { font-size: 20px !important; }
+  h3:not(.accordion-header) { font-size: 16px !important; }
+}
     
     .section-space {
       padding-top: 20px !important;
