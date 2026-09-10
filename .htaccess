@@ -29,6 +29,9 @@ RewriteRule ^shop/category/OrganicHerbPowderinBangladesh(?:\.html)?$ shop/catego
 RewriteRule ^shop/category/GenuineHealthItemsinBangladesh(?:\.html)?$ shop/category/health-items [R=301,L,NE,NC]
 RewriteRule ^shop/category/OrganicFreshFruitsinBangladesh(?:\.html)?$ shop/category/fresh-fruits [R=301,L,NE,NC]
 
+# Product slug migration: keep existing links working after the Aman rice rename.
+RewriteRule ^shop/product/aman-half-fiber-rice(?:\.html)?$ shop/product/aman-red-rice [R=301,L,NE,NC]
+
 # Redirect direct .html requests to their public extensionless URL.
 RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html(?:[?\s]) [NC]
 RewriteRule ^(.*/)?index\.html$ $1 [R=301,L,NE]
