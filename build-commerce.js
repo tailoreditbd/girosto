@@ -15,7 +15,6 @@ const replaceRegion=(html,name,content,fallback="</main>")=>{const pattern=new R
 const addCatalogScript=(html,prefix)=>replaceRegion(html,"catalog-script",`<script src="${prefix}assets/js/products.js"></script>`,`</body>`);
 const placeAfterPageHero=(html,name,content)=>{const region=new RegExp(`<!-- commerce:${name}:start -->[\\s\\S]*?<!-- commerce:${name}:end -->`,"i");const hero=/(<section class="page-hero">[\s\S]*?<\/section>)/i;html=html.replace(region,"");if(!hero.test(html))throw new Error(`Page hero not found while placing ${name}`);return html.replace(hero,`$1\n<!-- commerce:${name}:start -->\n${content}\n<!-- commerce:${name}:end -->`)};
 const categoryCarousel=prefix=>categoryCarouselTemplate.replace(/<!-- shared:home-categories:(?:start|end) -->\s*/g,"").replaceAll('href="shop/category/',`href="${prefix}shop/category/`).replaceAll('src="assets/img/category/',`src="${prefix}assets/img/category/`).replace('id="categoryGrid"','id="categoryGridBrowse"').replace('src="assets/js/category-carousel.js"',`src="${prefix}assets/js/category-carousel.js"`);
-const extraShopProducts=[{id:"mushroom-corn-soup",name:"মাশরুম স্যুপ (কর্ন, থাই)",category:"girosto-special",categoryName:"Girosto Special",sku:"GIR-119",variants:[{size:"২০০ গ্রাম",price:260}],slug:"mushroom-corn-soup",images:["assets/img/product/08-20-2026/mushroom-corn-soup.jpg"],image:"assets/img/product/08-20-2026/mushroom-corn-soup.jpg"}];
 
 function card(item,prefix=""){
   const index=firstAvailable(item),variant=index>=0?item.variants[index]:null;
@@ -43,7 +42,7 @@ fs.writeFileSync(indexFile,home,"utf8");
 const shopFile=path.join(root,"shop","index.html");
 let shop=fs.readFileSync(shopFile,"utf8");
 const options=catalog.categories.map(category=>`<option value="${category.slug}">${esc(category.name)}</option>`).join("");
-const shopSection=`<section class="commerce-section" id="products"><div class="container"><div class="section-heading"><div><p class="section-kicker">Workbook catalog</p><h2 class="section-title">All Girosto products</h2></div><span id="catalogCount" class="catalog-count">${products.length+extraShopProducts.length} products</span></div><div class="catalog-toolbar"><div class="catalog-search"><label class="visually-hidden" for="catalogFilter">Filter products</label><input id="catalogFilter" type="search" placeholder="Filter by name, SKU, or pack size"><button type="button" aria-label="Filter"><i class="bi bi-search"></i></button></div><label class="visually-hidden" for="catalogCategory">Category</label><select id="catalogCategory"><option value="">All categories</option>${options}</select></div><div class="commerce-grid">${products.map(item=>card(item,"../")).concat(extraShopProducts.map(item=>card(item,"../"))).join("")}</div></div></section><script src="../assets/js/catalog-filter.js" defer></script>`;
+const shopSection=`<section class="commerce-section" id="products"><div class="container"><div class="section-heading"><div><p class="section-kicker">Workbook catalog</p><h2 class="section-title">All Girosto products</h2></div><span id="catalogCount" class="catalog-count">${products.length} products</span></div><div class="catalog-toolbar"><div class="catalog-search"><label class="visually-hidden" for="catalogFilter">Filter products</label><input id="catalogFilter" type="search" placeholder="Filter by name, SKU, or pack size"><button type="button" aria-label="Filter"><i class="bi bi-search"></i></button></div><label class="visually-hidden" for="catalogCategory">Category</label><select id="catalogCategory"><option value="">All categories</option>${options}</select></div><div class="commerce-grid">${products.map(item=>card(item,"../")).join("")}</div></div></section><script src="../assets/js/catalog-filter.js" defer></script>`;
 shop=replaceRegion(shop,"shop-products",shopSection);
 shop=addCatalogScript(shop,"../");
 fs.writeFileSync(shopFile,shop,"utf8");
@@ -106,4 +105,5 @@ for(const item of products){
 }
 
 console.log(`Built ${products.length} product pages and connected catalog grids.`);
+
 
