@@ -996,6 +996,24 @@
             "available": true
         },
         {
+            "id": "g-119-2",
+            "sku": "GIR-119-2",
+            "name": "মাশরুম স্যুপ (কর্ন)",
+            "category": "girosto-special",
+            "categoryName": "Girosto Special",
+            "categoryFile": "girosto-special.html",
+            "icon": "bi-award",
+            "description": "মাশরুম স্যুপ (কর্ন) from the Girosto Special collection, selected for dependable quality and convenient household use.",
+            "variants": [
+                {
+                    "size": "২০০ গ্রাম",
+                    "price": 260
+                }
+            ],
+            "featured": false,
+            "available": true
+        },
+        {
             "id": "g-019",
             "sku": "GIR-019",
             "name": "দেশি বুটের ডাল",
