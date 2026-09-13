@@ -134,3 +134,13 @@ html body h3{font-size:26px!important}
 .reasons-section .col-lg-5 > p:not(.section-kicker) b {
   font-weight: 700 !important;
 }
+#more-than-produce .col-lg-5 > p:not(.section-kicker) {
+  font-size: 18px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+}
+
+#more-than-produce .col-lg-5 > p:not(.section-kicker) strong,
+#more-than-produce .col-lg-5 > p:not(.section-kicker) b {
+  font-weight: 700 !important;
+}
