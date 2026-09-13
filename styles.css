@@ -108,3 +108,4 @@ html body h2{font-size:30px!important}
 html body h3{font-size:26px!important}
 .category-faq-section .accordion-button{font-size:1.12rem!important}
 @media(max-width:767px){.intro-copy h1{font-size:34px!important}.intro-copy>p:not(.section-kicker){font-size:17px}}
+.home-copy-match,#categories>.container>.section-lead,#bestsellers>.container>.section-lead,#new-arrivals .feature-copy>p:not(.section-kicker){font-size:18px;line-height:1.7;font-weight:400!important}#categories>.container>.section-lead strong,#categories>.container>.section-lead b,#bestsellers>.container>.section-lead strong,#bestsellers>.container>.section-lead b,#new-arrivals .feature-copy>p:not(.section-kicker) strong,#new-arrivals .feature-copy>p:not(.section-kicker) b{font-weight:700!important}
