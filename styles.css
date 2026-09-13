@@ -61,7 +61,7 @@
 .intro-visual{position:relative}
 .intro-visual:before{content:"";position:absolute;inset:1.1rem -1rem -1.1rem 1rem;border-radius:1.5rem;background:var(--sage);z-index:0}
 .intro-visual img{position:relative;z-index:1;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:1.5rem;box-shadow:var(--shadow)}
-.intro-copy strong{font-weight:800}.intro-copy>p:not(.section-kicker),.intro-copy>p:not(.section-kicker) strong,.intro-copy>p:not(.section-kicker) b{font-weight:400!important}
+.intro-copy strong{font-weight:800}.intro-copy>p:not(.section-kicker),.intro-copy>p:not(.section-kicker) strong,.intro-copy>p:not(.section-kicker) b{font-weight:400!important}.intro-copy h1{font-size:40px!important}.intro-copy>p:not(.section-kicker){font-size:18px;line-height:1.7}
 @media(max-width:991px){.intro-visual{max-width:620px;margin-inline:auto}.header-logo{height:48px}}
 
 /* Compact auto-sliding category carousel */
@@ -107,3 +107,4 @@ html body h1{font-size:32px!important}
 html body h2{font-size:30px!important}
 html body h3{font-size:26px!important}
 .category-faq-section .accordion-button{font-size:1.12rem!important}
+@media(max-width:767px){.intro-copy h1{font-size:34px!important}.intro-copy>p:not(.section-kicker){font-size:17px}}
