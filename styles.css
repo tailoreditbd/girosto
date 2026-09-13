@@ -101,3 +101,9 @@
 .footer-bottom .footer-credit a{color:#fff;text-decoration:none;font-weight:700}
 .footer-bottom .footer-credit a:hover{color:#e7c477}
 @media(max-width:767px){.category-carousel .cat-card{flex-basis:118px;padding:.5rem}.category-carousel .cat-card-image{width:84px;height:84px}.category-carousel .cat-card span{min-height:40px;font-size:.82rem}.faq-heading{margin-bottom:2rem}.footer-credit{justify-content:flex-start}}
+
+/* Keep heading sizes consistent across every layout and screen size. */
+html body h1{font-size:32px!important}
+html body h2{font-size:30px!important}
+html body h3{font-size:26px!important}
+.category-faq-section .accordion-button{font-size:1.12rem!important}
