@@ -21,6 +21,11 @@ RewriteRule ^shop/product/turmeric-powder(?:\.html)?$ catagories/ground-spices/t
 RewriteRule ^shop/product/chilli-powder(?:\.html)?$ catagories/ground-spices/pure-chilli-powder [R=301,L,NE,NC]
 RewriteRule ^shop/product/roasted-cumin-powder(?:\.html)?$ catagories/ground-spices/pure-cumin-powder [R=301,L,NE,NC]
 RewriteRule ^shop/product/coriander-powder(?:\.html)?$ catagories/ground-spices/pure-coriander-powder [R=301,L,NE,NC]
+RewriteRule ^shop/product/hand-roasted-vermicelli(?:\.html)?$ catagories/girosto-special/handmade-bogura-semai [R=301,L,NE,NC]
+RewriteRule ^shop/product/handmade-cane-sugar(?:\.html)?$ catagories/girosto-special/homemade-cane-sugar [R=301,L,NE,NC]
+RewriteRule ^shop/product/green-tea(?:\.html)?$ catagories/girosto-special/green-tea [R=301,L,NE,NC]
+RewriteRule ^shop/product/shrimp-balachao(?:\.html)?$ catagories/girosto-special/homemade-chingri-balachao [R=301,L,NE,NC]
+RewriteRule ^shop/product/coconut-oil-hair-care(?:\.html)?$ catagories/girosto-special/hair-care-coconut-oil [R=301,L,NE,NC]
 
 # Permanently migrate legacy product-code URLs to English product slugs.
 RewriteRule ^shop/product/(g-[0-9]+(?:-[0-9]+)?)(?:\.html)?$ product-redirect.php?id=$1 [L,QSA,NC]

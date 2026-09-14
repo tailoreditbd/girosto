@@ -97,7 +97,7 @@ for(const category of catalog.categories){
 
 const productDir=path.join(root,"shop","product");fs.mkdirSync(productDir,{recursive:true});
 for(const filename of fs.readdirSync(productDir)){if(/^g-\d+(?:-\d+)?\.html$/i.test(filename))fs.unlinkSync(path.join(productDir,filename));}
-const migratedProductFiles=["virgin-cold-pressed-mustard-oil","premium-clone-tea","rakhi-mustard-oil","rolled-oats","meat-masala","biryani-masala","hand-roasted-red-puffed-rice","mushroom-masala","thai-mushroom-soup","mushroom-corn-soup","aman-red-flattened-rice","traditional-milk-cream-ghee","turmeric-powder","chilli-powder","roasted-cumin-powder","coriander-powder"];
+const migratedProductFiles=["virgin-cold-pressed-mustard-oil","premium-clone-tea","rakhi-mustard-oil","rolled-oats","meat-masala","biryani-masala","hand-roasted-red-puffed-rice","mushroom-masala","thai-mushroom-soup","mushroom-corn-soup","aman-red-flattened-rice","traditional-milk-cream-ghee","turmeric-powder","chilli-powder","roasted-cumin-powder","coriander-powder","hand-roasted-vermicelli","handmade-cane-sugar","green-tea","shrimp-balachao","coconut-oil-hair-care"];
 for(const slug of migratedProductFiles){const legacyFile=path.join(productDir,`${slug}.html`);if(fs.existsSync(legacyFile))fs.unlinkSync(legacyFile);}
 for(const item of products){
   const productPath=item.urlPath||`shop/product/${item.slug}`;
