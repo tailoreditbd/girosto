@@ -3784,6 +3784,24 @@
             ],
             "featured": false,
             "available": true
-        }
+        },
+{
+    "id":  "g-196",
+    "sku":  "GIR-196",
+    "name":  "হানি নাট",
+    "category":  "girosto-special",
+    "categoryName":  "Girosto Special",
+    "categoryFile":  "girosto-special.html",
+    "icon":  "bi-award",
+    "description":  "গিরস্তের হানি নাট তৈরি খাঁটি মধু ও বাছাই করা বাদামে, কোনো বাড়তি চিনি বা প্রিজারভেটিভ ছাড়া। এনার্জি স্ন্যাক, নাশতা বা গিফট হিসেবে উপযোগী।",
+    "variants":  [
+                     {
+                         "size":  "৪০০ গ্রাম",
+                         "price":  850
+                     }
+                 ],
+    "featured":  false,
+    "available":  true
+}
     ]
 }
