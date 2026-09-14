@@ -31,7 +31,7 @@
   <url><loc>https://www.girosto.com/shop/product/ajwa-dates</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/almonds</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/aman-half-fiber-rice</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.girosto.com/shop/product/aman-red-flattened-rice</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.girosto.com/catagories/girosto-special/lal-chira</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/ambassador-olive-oil-massage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/amla-candy</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/amla-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -65,7 +65,7 @@
   <url><loc>https://www.girosto.com/shop/product/chickpea-flour</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/chickpeas</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/chilli-flakes</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.girosto.com/shop/product/chilli-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.girosto.com/catagories/ground-spices/pure-chilli-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/chinigura-polao-rice</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/chirata-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/cinnamon-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -73,7 +73,7 @@
   <url><loc>https://www.girosto.com/shop/product/cloves</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/coconut-flakes</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/coconut-oil-hair-care</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.girosto.com/shop/product/coriander-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.girosto.com/catagories/ground-spices/pure-coriander-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/corn</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/cream-of-mushroom</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/cubeb-pepper</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -180,7 +180,7 @@
   <url><loc>https://www.girosto.com/shop/product/raw-cashews</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/ready-halim-mix</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/ready-mushroom</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.girosto.com/shop/product/roasted-cumin-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.girosto.com/catagories/ground-spices/pure-cumin-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/roasted-pistachios</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/catagories/girosto-special/homemade-rolled-oats</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/rooh-afza-pakistan</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -207,9 +207,9 @@
   <url><loc>https://www.girosto.com/catagories/girosto-special/mushroom-corn-soup</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/thai-sweet-tamarind</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/three-fruit-mix</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.girosto.com/shop/product/traditional-milk-cream-ghee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.girosto.com/catagories/dairy-poultry/pure-ghee</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/triphala-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.girosto.com/shop/product/turmeric-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.girosto.com/catagories/ground-spices/turmeric-powder</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/vietnam-black-rice</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/virgin-coconut-oil</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/catagories/girosto-special/virgin-cold-pressed-mustard-oil</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>

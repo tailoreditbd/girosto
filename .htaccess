@@ -15,6 +15,12 @@ RewriteRule ^shop/product/hand-roasted-red-puffed-rice(?:\.html)?$ catagories/gi
 RewriteRule ^shop/product/mushroom-masala(?:\.html)?$ catagories/girosto-special/mashroom-spice [R=301,L,NE,NC]
 RewriteRule ^shop/product/thai-mushroom-soup(?:\.html)?$ catagories/girosto-special/thai-mushroom-soup [R=301,L,NE,NC]
 RewriteRule ^shop/product/mushroom-corn-soup(?:\.html)?$ catagories/girosto-special/mushroom-corn-soup [R=301,L,NE,NC]
+RewriteRule ^shop/product/aman-red-flattened-rice(?:\.html)?$ catagories/girosto-special/lal-chira [R=301,L,NE,NC]
+RewriteRule ^shop/product/traditional-milk-cream-ghee(?:\.html)?$ catagories/dairy-poultry/pure-ghee [R=301,L,NE,NC]
+RewriteRule ^shop/product/turmeric-powder(?:\.html)?$ catagories/ground-spices/turmeric-powder [R=301,L,NE,NC]
+RewriteRule ^shop/product/chilli-powder(?:\.html)?$ catagories/ground-spices/pure-chilli-powder [R=301,L,NE,NC]
+RewriteRule ^shop/product/roasted-cumin-powder(?:\.html)?$ catagories/ground-spices/pure-cumin-powder [R=301,L,NE,NC]
+RewriteRule ^shop/product/coriander-powder(?:\.html)?$ catagories/ground-spices/pure-coriander-powder [R=301,L,NE,NC]
 
 # Permanently migrate legacy product-code URLs to English product slugs.
 RewriteRule ^shop/product/(g-[0-9]+(?:-[0-9]+)?)(?:\.html)?$ product-redirect.php?id=$1 [L,QSA,NC]
