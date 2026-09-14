@@ -15,7 +15,14 @@ if (!is_string($slug) || !preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/', $slug)) {
     exit('Product not found.');
 }
 
+$pathRegistryPath = __DIR__ . '/data/product-url-paths.json';
+$pathRegistry = json_decode((string) file_get_contents($pathRegistryPath), true);
+$productPath = is_array($pathRegistry) ? ($pathRegistry[$id] ?? null) : null;
+if (!is_string($productPath) || !preg_match('#^[a-z0-9]+(?:[/-][a-z0-9]+)*$#', $productPath)) {
+    $productPath = 'shop/product/' . $slug;
+}
+
 $requestPath = (string) parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $basePath = preg_replace('#/shop/product/.*$#', '', $requestPath) ?: '';
-header('Location: ' . $basePath . '/shop/product/' . $slug, true, 301);
+header('Location: ' . $basePath . '/' . $productPath, true, 301);
 exit;

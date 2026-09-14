@@ -4,11 +4,23 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /girosto/
 
+# Permanently migrate selected product URLs directly to their final category paths.
+RewriteRule ^shop/product/virgin-cold-pressed-mustard-oil(?:\.html)?$ catagories/girosto-special/virgin-cold-pressed-mustard-oil [R=301,L,NE,NC]
+RewriteRule ^shop/product/premium-clone-tea(?:\.html)?$ catagories/girosto-special/clone-tea [R=301,L,NE,NC]
+RewriteRule ^shop/product/rakhi-mustard-oil(?:\.html)?$ catagories/girosto-special/fermented-mustered-oil [R=301,L,NE,NC]
+RewriteRule ^shop/product/rolled-oats(?:\.html)?$ catagories/girosto-special/homemade-rolled-oats [R=301,L,NE,NC]
+RewriteRule ^shop/product/meat-masala(?:\.html)?$ catagories/girosto-special/ready-mix-beef-masala [R=301,L,NE,NC]
+RewriteRule ^shop/product/biryani-masala(?:\.html)?$ catagories/girosto-special/ready-mix-biryani-masala [R=301,L,NE,NC]
+RewriteRule ^shop/product/hand-roasted-red-puffed-rice(?:\.html)?$ catagories/girosto-special/handmade-puffed-rice [R=301,L,NE,NC]
+RewriteRule ^shop/product/mushroom-masala(?:\.html)?$ catagories/girosto-special/mashroom-spice [R=301,L,NE,NC]
+RewriteRule ^shop/product/thai-mushroom-soup(?:\.html)?$ catagories/girosto-special/thai-mushroom-soup [R=301,L,NE,NC]
+RewriteRule ^shop/product/mushroom-corn-soup(?:\.html)?$ catagories/girosto-special/mushroom-corn-soup [R=301,L,NE,NC]
+
 # Permanently migrate legacy product-code URLs to English product slugs.
 RewriteRule ^shop/product/(g-[0-9]+(?:-[0-9]+)?)(?:\.html)?$ product-redirect.php?id=$1 [L,QSA,NC]
 
 # Preserve SEO value after renaming the Thai mushroom soup product URL.
-RewriteRule ^shop/product/thai-corn-mushroom-soup(?:\.html)?$ shop/product/thai-mushroom-soup [R=301,L,NE,NC]
+RewriteRule ^shop/product/thai-corn-mushroom-soup(?:\.html)?$ catagories/girosto-special/thai-mushroom-soup [R=301,L,NE,NC]
 
 # Legacy category URLs: permanently redirect to concise SEO slugs.
 RewriteRule ^shop/category/BuyOrganicRiceOnlineinBangladeshGirosto(?:\.html)?$ shop/category/rice [R=301,L,NE,NC]
