@@ -21,3 +21,14 @@ This repository is the Girosto storefront. Public HTML pages are checked in alon
 
 - Review `git diff` for unexpected generated changes.
 - For script edits, run the specific affected build or a syntax check when practical. For HTML and CSS edits, inspect the affected page and its local links.
+
+## Focused code review
+
+Start with changed files and read only their direct dependencies:
+
+- For changes in `shop/product/` or `shop/category/`, inspect the affected page, its linked assets, and local links.
+- For changes in `data/`, inspect the relevant build script and generated pages.
+- For changes in `partials/`, inspect the relevant build script and affected pages.
+- For changes in `assets/`, inspect only pages that load the changed asset.
+
+Use `rg` to locate references. Avoid reading all generated catalog pages unless the change affects all of them. Review `git diff` before finishing.
