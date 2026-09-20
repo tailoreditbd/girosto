@@ -8,6 +8,8 @@ RewriteRule ^categories/girosto-special/ready-halim-mix(?:\.html)?$ catagories/g
 RewriteRule ^shop/product/ready-halim-mix(?:\.html)?$ catagories/girosto-special/ready-halim-mix [R=301,L,NE,NC]
 
 # Permanently migrate selected product URLs directly to their final category paths.
+RewriteRule ^categories/girosto-special/onion-powder(?:\.html)?$ catagories/girosto-special/onion-powder [R=301,L,NE,NC]
+RewriteRule ^shop/product/onion-powder(?:\.html)?$ catagories/girosto-special/onion-powder [R=301,L,NE,NC]
 RewriteRule ^shop/product/virgin-cold-pressed-mustard-oil(?:\.html)?$ catagories/girosto-special/virgin-cold-pressed-mustard-oil [R=301,L,NE,NC]
 RewriteRule ^shop/product/premium-clone-tea(?:\.html)?$ catagories/girosto-special/clone-tea [R=301,L,NE,NC]
 RewriteRule ^shop/product/rakhi-mustard-oil(?:\.html)?$ catagories/girosto-special/fermented-mustered-oil [R=301,L,NE,NC]
