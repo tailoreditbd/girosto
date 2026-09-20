@@ -1,0 +1,17 @@
+﻿# Local tooling and dependencies
+.git/
+.kilo/
+node_modules/
+vendor/
+
+# Temporary files and logs
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
