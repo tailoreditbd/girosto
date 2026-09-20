@@ -4,6 +4,9 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /girosto/
 
+RewriteRule ^categories/girosto-special/ready-halim-mix(?:\.html)?$ catagories/girosto-special/ready-halim-mix [R=301,L,NE,NC]
+RewriteRule ^shop/product/ready-halim-mix(?:\.html)?$ catagories/girosto-special/ready-halim-mix [R=301,L,NE,NC]
+
 # Permanently migrate selected product URLs directly to their final category paths.
 RewriteRule ^shop/product/virgin-cold-pressed-mustard-oil(?:\.html)?$ catagories/girosto-special/virgin-cold-pressed-mustard-oil [R=301,L,NE,NC]
 RewriteRule ^shop/product/premium-clone-tea(?:\.html)?$ catagories/girosto-special/clone-tea [R=301,L,NE,NC]
