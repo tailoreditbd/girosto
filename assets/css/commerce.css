@@ -60,14 +60,18 @@ button[aria-busy="true"]{cursor:wait;opacity:.72}
 
 .girosto-hero{position:relative;display:flex;align-items:center;height:auto;min-height:620px;overflow:hidden;isolation:isolate;background:#112b1d;color:#fff}
 .girosto-hero .hero-backgrounds,.girosto-hero .hero-background,.girosto-hero .hero-background img{position:absolute;inset:0;width:100%;height:100%}
-.girosto-hero .hero-background{opacity:0;transition:opacity 1s ease,transform 7s ease;transform:scale(1.025)}
-.girosto-hero .hero-background.active{opacity:1;transform:scale(1)}
+.girosto-hero .hero-background{opacity:0;transition:opacity .6s ease;transform:scale(1.01);will-change:opacity}
+.girosto-hero .hero-background.active{opacity:1;transform:scale(1.01)}
 .girosto-hero .hero-background img{object-fit:cover;object-position:center;filter:brightness(1.25) saturate(1.18) contrast(.94)}
 .girosto-hero .hero-shade{z-index:1;background:linear-gradient(90deg,rgba(10,42,23,.5) 0%,rgba(10,42,23,.27) 42%,rgba(10,42,23,.03) 76%),linear-gradient(0deg,rgba(8,29,16,.3),transparent 47%)}
 .girosto-hero .hero-content{position:relative;z-index:2;top:auto;left:auto;width:100%;padding-top:7rem;padding-bottom:8rem;color:#fff;transform:none}
 .hero-copy-carousel{width:100%;padding-bottom:1.75rem}
-.girosto-hero .carousel-inner{overflow:visible}
+.girosto-hero .carousel-inner{overflow:visible;min-height:420px}
 .girosto-hero .carousel-item{height:auto!important;min-height:0}
+.girosto-hero .carousel-fade .active.carousel-item-start,
+.girosto-hero .carousel-fade .active.carousel-item-end{
+  transition:opacity .35s ease-out;
+}
 .girosto-hero .hero-kicker{display:flex;align-items:center;gap:.8rem;margin:0 0 1.1rem;color:#f5d985;font-size:.65rem;letter-spacing:.2em}
 .girosto-hero .hero-kicker:before{content:"";width:32px;height:1px;background:currentColor}
 .girosto-hero .hero-title{max-width:760px;margin:0 0 1.5rem;font-size:clamp(3.4rem,6vw,6.4rem);font-weight:600;line-height:.94;letter-spacing:-.045em;text-shadow:0 3px 26px rgba(0,0,0,.22)}
@@ -75,7 +79,7 @@ button[aria-busy="true"]{cursor:wait;opacity:.72}
 .girosto-hero .hero-copy{max-width:620px;margin:0 0 1.8rem;color:rgba(255,255,255,.92);font-size:clamp(.9rem,1.15vw,1.05rem);line-height:1.75}
 .hero-shop-btn{padding:.85rem 1.35rem;border:1px solid #65b977;border-radius:0;background:#3f9858;color:#fff;font-size:.73rem;font-weight:700;letter-spacing:.08em}
 .hero-shop-btn:hover{border-color:#fff;background:#fff;color:var(--green)}
-.girosto-hero .carousel-indicators{right:auto;bottom:0;left:50%;width:max-content;margin:0;gap:.55rem;justify-content:center;transform:translateX(-50%)}
+.girosto-hero .carousel-indicators{right:auto;bottom:70px;left:50%;width:max-content;margin:0;gap:.55rem;justify-content:center;transform:translateX(-50%)}
 .girosto-hero .carousel-indicators [data-bs-target]{width:38px;height:2px;margin:0;border:0;background:#fff;opacity:.38}
 .girosto-hero .carousel-indicators .active{background:#ffe08a;opacity:1}
 .hero-trust{position:absolute;right:0;bottom:0;left:0;z-index:3;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.2);color:#fff}
@@ -115,12 +119,12 @@ button[aria-busy="true"]{cursor:wait;opacity:.72}
 @media(max-width:767px){
   .girosto-hero{min-height:680px}
   .girosto-hero .hero-background img{object-position:62% center}
-  .girosto-hero .hero-shade{background:linear-gradient(90deg,rgba(10,35,20,.56),rgba(10,35,20,.22)),linear-gradient(0deg,rgba(8,29,16,.4),transparent 52%)}
+  .girosto-hero .hero-shade{background:linear-gradient(90deg,rgba(10,35,20,.72),rgba(10,35,20,.36)),linear-gradient(0deg,rgba(8,29,16,.48),transparent 55%)}
   .girosto-hero .hero-content{padding-top:6.75rem;padding-bottom:11.25rem}
   .girosto-hero .carousel-item{min-height:0}
   .girosto-hero .hero-title{max-width:470px;font-size:clamp(2.8rem,12vw,4rem);line-height:.98}
   .girosto-hero .hero-copy{max-width:500px;font-size:.87rem}
-  .girosto-hero .carousel-indicators{bottom:0}
+  .girosto-hero .carousel-indicators{bottom:70px}
   .hero-trust{width:calc(100% - 30px)}
   .hero-trust>div{gap:.65rem;min-height:82px;padding:.7rem .75rem}
   .hero-trust>div:first-child{padding-left:.75rem}
