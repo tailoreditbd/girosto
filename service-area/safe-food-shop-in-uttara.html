@@ -58,6 +58,44 @@
             margin: 0 auto;
         }
 
+.city-breadcrumb-banner {
+            min-height: 250px;
+            margin-bottom: 54px;
+            padding: 48px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 42px;
+            background: var(--green);
+            color: #fff;
+            text-align: center;
+        }
+
+        .city-breadcrumb-title {
+            margin: 0 0 14px;
+            color: #fff;
+            font-family: "Baloo Da 2", system-ui, sans-serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .city-breadcrumbs {
+            margin: 0;
+            color: #e4ece6;
+            font-size: 1.1rem;
+        }
+
+        .city-breadcrumbs a {
+            color: #fff;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .city-breadcrumbs a:hover,
+        .city-breadcrumbs a:focus-visible {
+            color: #e7c477;
+        }
         .service-area-hero {
             overflow: hidden;
             background: #fbfaf6;
@@ -255,11 +293,21 @@
             line-height: 1.5;
         }
         @media (max-width: 767.98px) {
+
+            .city-breadcrumb-banner {
+                min-height: 230px;
+                margin-bottom: 42px;
+                border-radius: 24px;
+                padding: 36px 20px;
+            }
+
+            .city-breadcrumbs {
+                font-size: 1rem;
+            }
             .service-area-page {
                 padding: 34px 0 60px;
             }
-
-            .service-area-hero {
+        .service-area-hero {
                 border-radius: 16px;
                 margin-bottom: 42px;
             }
@@ -334,6 +382,12 @@
     <main id="main">
         <article class="service-area-page">
             <div class="container">
+                <nav class="city-breadcrumb-banner" aria-label="Breadcrumb">
+                    <div>
+                        <p class="city-breadcrumb-title">Safe Food Shop in Uttara</p>
+                        <p class="city-breadcrumbs"><a href="../">Home</a> <span aria-hidden="true">/</span> Uttara</p>
+                    </div>
+                </nav>
                 <section class="service-area-hero">
                     <div class="row g-5 align-items-end">
                         <div class="col-lg-5">
