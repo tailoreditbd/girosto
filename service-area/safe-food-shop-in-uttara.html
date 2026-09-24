@@ -59,11 +59,31 @@
         }
 
         .service-area-hero {
+            overflow: hidden;
             background: #fbfaf6;
             border: 1px solid #e6e2d9;
             border-radius: 22px;
-            padding: clamp(28px, 5vw, 58px);
             margin-bottom: 54px;
+        }
+
+        .service-area-hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            align-items: center;
+        }
+
+        .service-area-hero-media img {
+            width: 100%;
+            height: 520px;
+            min-height: 0;
+            object-fit: cover;
+        }
+
+        .service-area-hero-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(28px, 4vw, 52px);
         }
 
         .service-area-page h1 {
@@ -193,6 +213,47 @@
         .category-faq-section .accordion-button {
             font-weight: 600;
         }
+
+        /* Match the homepage intro section exactly. */
+        .service-area-hero {
+            overflow: visible;
+            background: transparent;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 54px;
+        }
+
+        .service-area-hero .intro-visual {
+            position: relative;
+        }
+
+        .service-area-hero .intro-visual::before {
+            content: "";
+            position: absolute;
+            inset: 1.1rem -1rem -1.1rem 1rem;
+            border-radius: 1.5rem;
+            background: var(--sage);
+            z-index: 0;
+        }
+
+        .service-area-hero .intro-visual img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .service-area-hero .intro-visual figcaption {
+            position: relative;
+            z-index: 1;
+            margin-top: 1rem;
+            color: var(--muted);
+            font-size: .76rem;
+            line-height: 1.5;
+        }
         @media (max-width: 767.98px) {
             .service-area-page {
                 padding: 34px 0 60px;
@@ -203,6 +264,24 @@
                 margin-bottom: 42px;
             }
 
+            .service-area-hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-area-hero-media img {
+                min-height: 0;
+                height: 300px;
+            }
+
+            .service-area-hero-copy {
+                padding: 28px 22px 32px;
+            }
+
+
+            .service-area-hero .intro-visual {
+                max-width: 620px;
+                margin-inline: auto;
+            }
             .point-grid,
             .product-link-grid {
                 grid-template-columns: 1fr;
@@ -255,13 +334,24 @@
     <main id="main">
         <article class="service-area-page">
             <div class="container">
+                <section class="service-area-hero">
+                    <div class="row g-5 align-items-end">
+                        <div class="col-lg-5">
+                            <figure class="intro-visual mb-0">
+                                <img src="../assets/img/home/organic-food-shop-in-dhaka-bangladesh.webp" width="280" height="350" alt="Girosto safe and organic food shop in Uttara" loading="lazy">
+                                <figcaption>উত্তরার পরিবারের জন্য নিরাপদ ও স্বাস্থ্যকর খাবারের বিশ্বস্ত ঠিকানা।</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-lg-7 intro-copy">
+                            <p class="section-kicker">Welcome to Girosto</p>
+                            <h1 class="section-title">উত্তরার বেস্ট সেইফ ফুড শপ | Girosto (গিরস্ত)</h1>
+                            <p><strong><a href="https://www.girosto.com/">Girosto</a></strong> <strong>(গিরস্ত)</strong> উত্তরার পরিবারগুলোর জন্য এনেছে <strong>নিরাপদ খাবার</strong>, খাঁটি রান্নাঘরের উপকরণ ও প্রতিদিনের স্বাস্থ্যকর বাজার, সবই এক জায়গায়। আপনি যদি <strong>উত্তরায় সেইফ ফুড শপ</strong> খোঁজেন, যেখানে ঘানি ভাঙা সরিষার তেল, মসলা, ডাল, ঘি, মধু, বাদাম আর ঐতিহ্যবাহী দেশি খাবার একসাথে মেলে, তাহলে গিরস্ত হতে পারে আপনার ভরসার ঠিকানা। আমাদের ঠিকানা <strong>উত্তরা সেক্টর ৫</strong>-এ, তাই এই এলাকার পরিবারগুলোর চাহিদা আমরা কাছ থেকে বুঝি।</p>
+                            <p>উত্তরায় অফিসগামী মানুষ, ছোট-বড় পরিবার, শিশু ও প্রবীণ সবাই পাশাপাশি থাকেন। এখানে বাজারে ঘুরে সময় কাটানোর চেয়ে <strong>ভরসা করে কেনার সুযোগটাই বেশি জরুরি</strong>। প্যাকেটে "খাঁটি" লেখা থাকলেই পণ্য আসলেই খাঁটি হয় না। তাই গিরস্ত প্রতিটি পণ্যের উৎস, উপাদান ও প্রস্তুত প্রণালী যাচাই করে তবেই তা আপনার হাতে তুলে দেয়।</p>
+                            <a class="text-link" href="https://wa.me/8801860963171" target="_blank" rel="noopener">কল করুন <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </section>
                 <div class="content-wrap">
-                    <section class="service-area-hero">
-                        <h1>উত্তরার বেস্ট সেইফ ফুড শপ | Girosto (গিরস্ত)</h1>
-                        <p><strong><a href="https://www.girosto.com/">Girosto</a></strong> <strong>(গিরস্ত)</strong> উত্তরার পরিবারগুলোর জন্য এনেছে <strong>নিরাপদ খাবার</strong>, খাঁটি রান্নাঘরের উপকরণ ও প্রতিদিনের স্বাস্থ্যকর বাজার, সবই এক জায়গায়। আপনি যদি <strong>উত্তরায় সেইফ ফুড শপ</strong> খোঁজেন, যেখানে ঘানি ভাঙা সরিষার তেল, মসলা, ডাল, ঘি, মধু, বাদাম আর ঐতিহ্যবাহী দেশি খাবার একসাথে মেলে, তাহলে গিরস্ত হতে পারে আপনার ভরসার ঠিকানা। আমাদের ঠিকানা <strong>উত্তরা সেক্টর ৫</strong>-এ, তাই এই এলাকার পরিবারগুলোর চাহিদা আমরা কাছ থেকে বুঝি।</p>
-                        <p>উত্তরায় অফিসগামী মানুষ, ছোট-বড় পরিবার, শিশু ও প্রবীণ সবাই পাশাপাশি থাকেন। এখানে বাজারে ঘুরে সময় কাটানোর চেয়ে <strong>ভরসা করে কেনার সুযোগটাই বেশি জরুরি</strong>। প্যাকেটে "খাঁটি" লেখা থাকলেই পণ্য আসলেই খাঁটি হয় না। তাই গিরস্ত প্রতিটি পণ্যের উৎস, উপাদান ও প্রস্তুত প্রণালী যাচাই করে তবেই তা আপনার হাতে তুলে দেয়।</p>
-                        <div class="cta-row"><a class="btn btn-primary btn-lg rounded-pill" href="https://wa.me/8801860963171" target="_blank" rel="noopener">কল করুন</a></div>
-                    </section>
 
                     <section class="content-section">
                         <h2>উত্তরা: পরিকল্পিত শহরে নিরাপদ খাবারের বাড়তি চাহিদা</h2>
