@@ -50,6 +50,131 @@
   <script src="../assets/js/store.js" defer></script>
   <script src="../assets/js/site-header.js" defer></script>
   <!-- shared:head:end -->
+  <style>
+  .blog-list-section {
+    padding: 35px 0 55px;
+    background: #faf9f5;
+  }
+
+  .girosto-blog-card {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    max-width: 850px;
+    min-height: 160px;
+    margin: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8e8e2;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(24, 56, 38, 0.06);
+  }
+
+  .girosto-blog-card-image {
+    display: block;
+    width: 170px;
+    height: 160px;
+    overflow: hidden;
+    background: #edf2ed;
+  }
+
+  .girosto-blog-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .girosto-blog-card:hover .girosto-blog-card-image img {
+    transform: scale(1.04);
+  }
+
+  .girosto-blog-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 22px;
+  }
+
+  .girosto-blog-card-content h2 {
+    margin: 0 0 7px;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .girosto-blog-card-content h2 a {
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .girosto-blog-card-content h2 a:hover,
+  .girosto-blog-card-content h2 a:focus-visible {
+    color: #b78c2f;
+  }
+
+  .girosto-blog-card-content p {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .girosto-blog-read-more {
+    width: fit-content;
+    min-width: 105px;
+    padding: 7px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+    background: var(--green);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .girosto-blog-read-more:hover,
+  .girosto-blog-read-more:focus-visible {
+    background: #b78c2f;
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 575.98px) {
+    .girosto-blog-card {
+      grid-template-columns: 120px 1fr;
+      min-height: 145px;
+    }
+
+    .girosto-blog-card-image {
+      width: 120px;
+      height: 145px;
+    }
+
+    .girosto-blog-card-content {
+      padding: 12px 14px;
+    }
+
+    .girosto-blog-card-content h2 {
+      font-size: 0.95rem;
+    }
+
+    .girosto-blog-card-content p {
+      font-size: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .girosto-blog-read-more {
+      min-width: 90px;
+      padding: 6px 11px;
+      font-size: 0.72rem;
+    }
+  }
+</style>
 </head>
 
 <body>
@@ -89,6 +214,7 @@
         </div>
       </div>
     </nav>
+
   </header>
   <!-- shared:header:end -->
   <main>
@@ -103,6 +229,43 @@
           more conscious lifestyle for you and your family.</p>
       </div>
     </section>
+      <section class="blog-list-section">
+    <div class="container">
+      <article class="girosto-blog-card">
+        <a class="girosto-blog-card-image"
+          href="YOUR-BLOG-PAGE-LINK"
+          aria-label="Read YOUR BLOG TITLE">
+
+          <img src="../assets/img/blog/YOUR-BLOG-IMAGE.webp"
+            width="600"
+            height="600"
+            alt="YOUR BLOG IMAGE ALT TEXT"
+            loading="lazy"
+            decoding="async">
+        </a>
+
+        <div class="girosto-blog-card-content">
+          <h2>
+            <a href="YOUR-BLOG-PAGE-LINK">
+              YOUR BLOG TITLE
+            </a>
+          </h2>
+
+          <p>
+            Add a short introduction to the blog post here. Keep the description concise and explain what readers will
+            learn from the article.
+          </p>
+
+          <a class="girosto-blog-read-more"
+            href="YOUR-BLOG-PAGE-LINK">
+            Read More
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   </main><!-- shared:footer:start -->
   <footer class="site-footer">
     <div class="container">
