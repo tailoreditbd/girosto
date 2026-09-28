@@ -229,4 +229,14 @@
   <url><loc>https://www.girosto.com/shop/product/safe-layer-eggs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/shop/product/fresh-hill-turmeric</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.girosto.com/catagories/girosto-special/honey-nut</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url>
+    <loc>https://www.girosto.com/blog/organic-food-ki-shotti-safe-food-bangladesh</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.girosto.com/blog/safe-agricultural-products-ki-bebostha-proyojon</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
 </urlset>
