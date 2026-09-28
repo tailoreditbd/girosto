@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ8QNY3ZDX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-CJ8QNY3ZDX');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-5BH59HB3');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Healthy Living Blog | Girosto</title>
+  <meta name="description"
+    content="Read Girosto's practical guides to organic food, pantry choices, storage, mindful eating, and healthier everyday living in Bangladesh.">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../styles.css"><!-- shared:head:start -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&amp;display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" sizes="16x16" href="../assets/img/girosto-favicon-16x16.svg">
+  <link rel="icon" type="image/svg+xml" sizes="32x32" href="../assets/img/girosto-favicon-32x32.svg">
+  <link rel="icon" type="image/svg+xml" sizes="48x48" href="../assets/img/girosto-favicon-48x48.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/girosto-favicon-180x180.svg">
+  <link rel="icon" type="image/svg+xml" sizes="192x192" href="../assets/img/girosto-favicon-192x192.svg">
+  <meta property="og:image" content="https://www.girosto.com/assets/img/girosto-og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Girosto organic food shop in Bangladesh">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.girosto.com/assets/img/girosto-og-image.png">
+  <link rel="stylesheet" href="../assets/css/commerce.css">
+  <script src="../assets/js/store.js" defer></script>
+  <script src="../assets/js/site-header.js" defer></script>
+  <!-- shared:head:end -->
+  <style>
+  .blog-list-section {
+    padding: 35px 0 55px;
+    background: #faf9f5;
+  }
+
+  .girosto-blog-card {
+    display: grid;
+    grid-template-columns: 170px 1fr;
+    max-width: 850px;
+    min-height: 160px;
+    margin: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e8e8e2;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(24, 56, 38, 0.06);
+  }
+
+  .girosto-blog-card-image {
+    display: block;
+    width: 170px;
+    height: 160px;
+    overflow: hidden;
+    background: #edf2ed;
+  }
+
+  .girosto-blog-card-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
+
+  .girosto-blog-card:hover .girosto-blog-card-image img {
+    transform: scale(1.04);
+  }
+
+  .girosto-blog-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 22px;
+  }
+
+  .girosto-blog-card-content h2 {
+    margin: 0 0 7px;
+    font-size: 1.1rem;
+    line-height: 1.3;
+  }
+
+  .girosto-blog-card-content h2 a {
+    color: var(--green);
+    text-decoration: none;
+  }
+
+  .girosto-blog-card-content h2 a:hover,
+  .girosto-blog-card-content h2 a:focus-visible {
+    color: #b78c2f;
+  }
+
+  .girosto-blog-card-content p {
+    margin: 0 0 10px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .girosto-blog-read-more {
+    width: fit-content;
+    min-width: 105px;
+    padding: 7px 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 5px;
+    background: var(--green);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .girosto-blog-read-more:hover,
+  .girosto-blog-read-more:focus-visible {
+    background: #b78c2f;
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 575.98px) {
+    .girosto-blog-card {
+      grid-template-columns: 120px 1fr;
+      min-height: 145px;
+    }
+
+    .girosto-blog-card-image {
+      width: 120px;
+      height: 145px;
+    }
+
+    .girosto-blog-card-content {
+      padding: 12px 14px;
+    }
+
+    .girosto-blog-card-content h2 {
+      font-size: 0.95rem;
+    }
+
+    .girosto-blog-card-content p {
+      font-size: 0.75rem;
+      line-height: 1.4;
+    }
+
+    .girosto-blog-read-more {
+      min-width: 90px;
+      padding: 6px 11px;
+      font-size: 0.72rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BH59HB3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) --><!-- shared:header:start -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+      <div class="container">
+        <a class="navbar-brand" href="../" aria-label="Girosto home">
+          <img class="header-logo header-logo-light" src="../assets/img/girosto-header-logo.svg" width="210" height="67"
+            alt="Girosto">
+          <img class="header-logo header-logo-dark" src="../assets/img/girosto-header-logo.svg" width="210" height="67"
+            alt="" aria-hidden="true">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
+          aria-controls="siteNav" aria-expanded="false" aria-label="Open menu"><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="siteNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../shop/">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="../#categories">Categories</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about-us">About us</a></li>
+            <li class="nav-item"><a class="nav-link" href="../blog/HealthyLivingBlogGirosto">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../contact-us">Contact</a></li>
+          </ul>
+          <div class="header-actions">
+            <a class="header-icon-link" href="../search" aria-label="Search products"><i class="bi bi-search"></i></a>
+            <a class="header-icon-link" href="../contact-us" aria-label="Customer support"><i
+                class="bi bi-person"></i></a>
+            <a class="cart-link" href="../cart" aria-label="View shopping cart"><i class="bi bi-bag"></i><span
+                data-cart-count>0</span></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+  <!-- shared:header:end -->
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumbs"><a href="../">Home</a> / Journal</p>
+        <p class="section-kicker">The Girosto journal</p>
+        <h1>Healthy living blog | Girosto</h1>
+        <p class="lead">Explore practical guides, helpful tips, and informative articles about organic food, natural
+          ingredients, nutrition, and healthy living. The Girosto blog helps you understand food quality, make informed
+          shopping decisions, and build healthier everyday habits. Discover simple ideas for creating safer meals and a
+          more conscious lifestyle for you and your family.</p>
+      </div>
+    </section>
+      <section class="blog-list-section">
+    <div class="container">
+      <article class="girosto-blog-card">
+        <a class="girosto-blog-card-image"
+          href="YOUR-BLOG-PAGE-LINK"
+          aria-label="Read YOUR BLOG TITLE">
+
+          <img src="../assets/img/blog/YOUR-BLOG-IMAGE.webp"
+            width="600"
+            height="600"
+            alt="YOUR BLOG IMAGE ALT TEXT"
+            loading="lazy"
+            decoding="async">
+        </a>
+
+        <div class="girosto-blog-card-content">
+          <h2>
+            <a href="YOUR-BLOG-PAGE-LINK">
+              YOUR BLOG TITLE
+            </a>
+          </h2>
+
+          <p>
+            Add a short introduction to the blog post here. Keep the description concise and explain what readers will
+            learn from the article.
+          </p>
+
+          <a class="girosto-blog-read-more"
+            href="YOUR-BLOG-PAGE-LINK">
+            Read More
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  </main><!-- shared:footer:start -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="footer-brand" href="../" aria-label="Girosto home"><img class="footer-logo"
+              src="../assets/img/girosto-footer-logo.svg" width="190" height="62" alt="Girosto"></a>
+          <p class="mt-3">Trusted organic food, natural groceries, and healthier everyday essentials for families across
+            Bangladesh.</p>
+        </div>
+        <div>
+          <h2>Shop</h2><a href="../shop/">All categories</a><a href="../shop/category/rice">Organic rice</a><a
+            href="../shop/category/honey">Original honey</a><a href="../shop/category/nuts">Premium nuts</a>
+        </div>
+        <div>
+          <h2>Company</h2><a href="../about-us">About Girosto</a><a href="../blog/HealthyLivingBlogGirosto">Healthy
+            living blog</a><a href="../contact-us">Contact us</a><a href="../delivery-policy">Delivery policy</a>
+        </div>
+        <div>
+          <h2>Contact</h2><a href="tel:+8801860963171">+88 01860 963 171</a><a
+            href="mailto:girostobd@gmail.com">girostobd@gmail.com</a>
+          <address>House 30, Road 4, Sector 5<br>Uttara, Dhaka 1230</address>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© <span class="current-year">2026</span> Girosto. All rights
+          reserved.</span><span class="footer-credit">Made with <i class="bi bi-heart-fill" aria-hidden="true"></i> by
+          <a href="https://tailoreditbd.com/" target="_blank" rel="noopener">TailorEditBD</a></span><span><a
+            href="../privacy-policy">Privacy</a><a href="../refund-and-replacement-policy-girosto">Refund &amp;
+            replacement</a></span></div>
+    </div>
+  </footer>
+  <!-- shared:footer:end --><a class="wa-float" href="https://wa.me/8801860963171" aria-label="WhatsApp"><i
+      class="bi bi-whatsapp"></i></a>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
