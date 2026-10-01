@@ -7,6 +7,10 @@ RewriteBase /girosto/
 # Keep the blog index at the clean /blog/ URL.
 RewriteRule ^blog/HealthyLivingBlogGirosto(?:\.html)?$ blog/ [R=301,L,NE,NC]
 
+# Permanently migrate renamed blog posts to their new canonical URLs.
+RewriteRule ^blog/safe-agricultural-products-ki-bebostha-proyojon(?:\.html)?$ blog/safe-agricultural-products [R=301,L,NE,NC]
+RewriteRule ^blog/organic-food-ki-shotti-safe-food-bangladesh(?:\.html)?$ blog/organic-food-vs-safe-food [R=301,L,NE,NC]
+
 RewriteRule ^categories/girosto-special/ready-halim-mix(?:\.html)?$ catagories/girosto-special/ready-halim-mix [R=301,L,NE,NC]
 RewriteRule ^shop/product/ready-halim-mix(?:\.html)?$ catagories/girosto-special/ready-halim-mix [R=301,L,NE,NC]
 
