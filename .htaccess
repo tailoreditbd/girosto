@@ -2,11 +2,7 @@ Options -MultiViews
 DirectoryIndex index.html
 
 RewriteEngine On
-RewriteBase /
-
-# Normalize accidental duplicate leading slashes before other redirects run.
-RewriteCond %{THE_REQUEST} \s/+(/[^?\ ]*) [NC]
-RewriteRule ^ %1 [R=301,L,NE]
+RewriteBase /girosto/
 
 # Keep the blog index at the clean /blog/ URL.
 RewriteRule ^blog/HealthyLivingBlogGirosto(?:\.html)?$ blog/ [R=301,L,NE,NC]

@@ -24,6 +24,5 @@ if (!is_string($productPath) || !preg_match('#^[a-z0-9]+(?:[/-][a-z0-9]+)*$#', $
 
 $requestPath = (string) parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $basePath = preg_replace('#/shop/product/.*$#', '', $requestPath) ?: '';
-$basePath = rtrim($basePath, '/');
 header('Location: ' . $basePath . '/' . $productPath, true, 301);
 exit;
