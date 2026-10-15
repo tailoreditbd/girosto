@@ -62,6 +62,7 @@
     }
 
     .city-breadcrumb-banner {
+      position: relative;
       min-height: 250px;
       margin-bottom: 54px;
       padding: 48px 24px;
@@ -72,6 +73,20 @@
       background: var(--green);
       color: #fff;
       text-align: center;
+      overflow: hidden;
+    }
+
+    .city-breadcrumb-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .city-breadcrumb-banner > div {
+      position: relative;
+      z-index: 1;
     }
 
     .city-breadcrumb-title {
@@ -389,6 +404,8 @@
     <article class="service-area-page">
       <div class="container">
         <nav class="city-breadcrumb-banner" aria-label="Breadcrumb">
+          <img class="city-breadcrumb-image" src="../assets/img/city%20img/safe-food-shop-in-uttara-breadcrum.webp"
+            alt="উত্তরার লেকের ওপর সেতু ও সারি সারি আবাসিক ভবন">
           <div>
             <p class="city-breadcrumb-title">Safe Food Shop in Uttara</p>
             <p class="city-breadcrumbs"><a href="../">Home</a> /<a href="https://www.girosto.com/service-area/">service area</a> <span aria-hidden="true">/</span> Uttara</p>
@@ -398,8 +415,8 @@
           <div class="row g-5 align-items-end">
             <div class="col-lg-5">
               <figure class="intro-visual mb-0">
-                <img src="../assets/img/home/organic-food-shop-in-dhaka-bangladesh.webp" width="280" height="350"
-                  alt="Girosto safe and organic food shop in Uttara" loading="lazy">
+                <img src="../assets/img/city%20img/best-safe-food-shop-in-uttara-hero.webp" width="280" height="350"
+                  alt="উত্তরার বেস্ট সেইফ ফুড শপ | Girosto (গিরস্ত)" loading="lazy">
                 <figcaption>উত্তরার পরিবারের জন্য নিরাপদ ও স্বাস্থ্যকর খাবারের বিশ্বস্ত ঠিকানা।</figcaption>
               </figure>
             </div>

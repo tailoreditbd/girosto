@@ -62,6 +62,7 @@
     }
 
     .city-breadcrumb-banner {
+      position: relative;
       min-height: 250px;
       margin-bottom: 54px;
       padding: 48px 24px;
@@ -72,6 +73,20 @@
       background: var(--green);
       color: #fff;
       text-align: center;
+      overflow: hidden;
+    }
+
+    .city-breadcrumb-image {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .city-breadcrumb-banner > div {
+      position: relative;
+      z-index: 1;
     }
 
     .city-breadcrumb-title {
@@ -415,6 +430,10 @@
                 <nav class="city-breadcrumb-banner"
                     aria-label="Breadcrumb">
 
+                    <img class="city-breadcrumb-image"
+                        src="../assets/img/city%20img/authentic-food-shop-in-nikunja-breadcrum.webp"
+                        alt="নিকুঞ্জের লেক, সবুজ গাছপালা ও আবাসিক এলাকা">
+
                     <div>
                         <p class="city-breadcrumb-title">
                               অথেনটিক ফুড শপ ইন নিকুঞ্জ
@@ -434,10 +453,10 @@
                         <div class="col-lg-5">
                             <figure class="intro-visual mb-0">
                                 <img
-                                    src="../assets/img/home/organic-food-shop-in-dhaka-bangladesh.webp"
+                                    src="../assets/img/city%20img/best-trusted-food-shop-in-nikunja-hero.webp"
                                     width="280"
                                     height="350"
-                                    alt="Girosto authentic food shop for Diabari families"
+                                    alt="নিকুঞ্জের জন্য বেস্ট ট্রাস্টেড ফুড শপ | গিরস্ত"
                                     loading="lazy">
 
                                 <figcaption>
