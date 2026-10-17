@@ -52,7 +52,7 @@ fs.writeFileSync(shopFile,shop,"utf8");
 
 for(const category of catalog.categories){
   const file=path.join(root,"shop","category",category.file);if(!fs.existsSync(file))continue;
-  let html=fs.readFileSync(file,"utf8");const items=products.filter(item=>item.category===category.slug);
+  let html=fs.readFileSync(file,"utf8");const items=products.filter(item=>item.category===category.slug||(category.slug==="girosto-special"&&item.id==="g-068"));
   const categoryCopy={
     rice:{title:"Premium rice collection at Girosto",lead:`<p class="section-lead"><strong>Girosto</strong> offers a quality <strong>rice</strong> collection selected to meet different cooking preferences, dietary needs, and household requirements. Explore naturally sourced <strong>rice</strong> with excellent texture, authentic flavor, and consistent cooking results.</p>`},
     "mustard-oil":{title:"Mustard oil collection at Girosto",lead:`<p class="section-lead">Explore <strong>Girosto&rsquo;s</strong> collection of pure <strong>mustard oil</strong> prepared to retain its natural aroma, strong flavor, and traditional characteristics. Choose from different processing methods and trusted options according to your cooking needs.</p>`},
@@ -97,9 +97,9 @@ for(const category of catalog.categories){
 
 const productDir=path.join(root,"shop","product");fs.mkdirSync(productDir,{recursive:true});
 for(const filename of fs.readdirSync(productDir)){if(/^g-\d+(?:-\d+)?\.html$/i.test(filename))fs.unlinkSync(path.join(productDir,filename));}
-const migratedProductFiles=["virgin-cold-pressed-mustard-oil","premium-clone-tea","rakhi-mustard-oil","rolled-oats","meat-masala","biryani-masala","hand-roasted-red-puffed-rice","mushroom-masala","thai-mushroom-soup","mushroom-corn-soup","aman-red-flattened-rice","traditional-milk-cream-ghee","turmeric-powder","chilli-powder","roasted-cumin-powder","coriander-powder","hand-roasted-vermicelli","handmade-cane-sugar","green-tea","shrimp-balachao","coconut-oil-hair-care","garlic-pickle","black-gram-flour","blackseed-oil","pink-salt-powder-and-stone"];
+const migratedProductFiles=["palmyra-patali-jaggery","virgin-cold-pressed-mustard-oil","premium-clone-tea","rakhi-mustard-oil","rolled-oats","meat-masala","biryani-masala","hand-roasted-red-puffed-rice","mushroom-masala","thai-mushroom-soup","mushroom-corn-soup","aman-red-flattened-rice","traditional-milk-cream-ghee","turmeric-powder","chilli-powder","roasted-cumin-powder","coriander-powder","hand-roasted-vermicelli","handmade-cane-sugar","green-tea","shrimp-balachao","coconut-oil-hair-care","garlic-pickle","black-gram-flour","blackseed-oil","pink-salt-powder-and-stone"];
 for(const slug of migratedProductFiles){const legacyFile=path.join(productDir,`${slug}.html`);if(fs.existsSync(legacyFile))fs.unlinkSync(legacyFile);}
-const preservedProductPageIds=new Set(["g-031","g-071","g-115","g-196"]);
+const preservedProductPageIds=new Set(["g-068","g-031","g-071","g-115","g-196"]);
 const noIndexProductPageIds=new Set(["g-122","g-084","g-190","g-062","g-082","g-071","g-064"]);
 for(const item of products){
   const productPath=item.urlPath||`shop/product/${item.slug}`;
