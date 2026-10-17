@@ -99,7 +99,7 @@ const productDir=path.join(root,"shop","product");fs.mkdirSync(productDir,{recur
 for(const filename of fs.readdirSync(productDir)){if(/^g-\d+(?:-\d+)?\.html$/i.test(filename))fs.unlinkSync(path.join(productDir,filename));}
 const migratedProductFiles=["chickpea-flour","fenugreek-powder","palmyra-patali-jaggery","virgin-cold-pressed-mustard-oil","premium-clone-tea","rakhi-mustard-oil","rolled-oats","meat-masala","biryani-masala","hand-roasted-red-puffed-rice","mushroom-masala","thai-mushroom-soup","mushroom-corn-soup","aman-red-flattened-rice","traditional-milk-cream-ghee","turmeric-powder","chilli-powder","roasted-cumin-powder","coriander-powder","hand-roasted-vermicelli","handmade-cane-sugar","green-tea","shrimp-balachao","coconut-oil-hair-care","garlic-pickle","black-gram-flour","blackseed-oil","pink-salt-powder-and-stone"];
 for(const slug of migratedProductFiles){const legacyFile=path.join(productDir,`${slug}.html`);if(fs.existsSync(legacyFile))fs.unlinkSync(legacyFile);}
-const preservedProductPageIds=new Set(["g-163","g-068","g-031","g-071","g-115","g-196"]);
+const preservedProductPageIds=new Set(["g-113","g-163","g-068","g-031","g-071","g-115","g-196"]);
 const noIndexProductPageIds=new Set(["g-122","g-084","g-190","g-062","g-082","g-071","g-064"]);
 for(const item of products){
   const productPath=item.urlPath||`shop/product/${item.slug}`;
