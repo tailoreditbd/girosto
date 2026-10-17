@@ -54,6 +54,46 @@
   <script src="../../assets/js/store.js" defer></script>
   <script src="../../assets/js/site-header.js" defer></script>
   <!-- shared:head:end -->
+  <style>
+    .product-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+      margin-bottom: 15px;
+    }
+
+    .product-meta-card {
+      padding: 9px 12px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 9px;
+      background: #fff;
+    }
+
+    .product-meta-card span {
+      display: block;
+      line-height: 1.45;
+    }
+
+    .product-meta-card {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 767.98px) {
+      .product-meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .category-faq-section {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .category-faq-section .faq-heading {
+      margin-bottom: 16px;
+    }
+  </style>
 </head>
 
 <body>
@@ -96,49 +136,854 @@
     </nav>
   </header>
   <!-- shared:header:end -->
-  <main id="main">
+ <main id="main">
+
     <section class="product-detail">
-      <div class="container">
-        <p class="breadcrumbs"><a href="../../">Home</a> / <a href="../../#categories">Categories</a> / <a
-            href="../../shop/category/girosto-special">Girosto Special</a> / খাঁটি তালের গুঁড়</p>
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-6">
-            <div class="product-gallery"><img class="product-image product-image-artwork"
-                src="../../assets/img/product-fallback/jaggery.jpg" alt="Jaggery artwork for তালের গুঁড়  (পাটালি)"
-                decoding="async"></div>
-          </div>
-          <div class="col-lg-6 product-info">
-            <p class="product-category">Jaggery</p>
-            <h1>তালের গুঁড় (পাটালি)</h1>
-            <p class="product-sku">SKU: GIR-068</p>
-            <p>তালের গুঁড় (পাটালি) from Girosto’s Jaggery collection, selected for dependable quality and convenient
-              household use.</p>
-            <p id="productPrice" class="product-price">Currently unavailable</p>
-            <div class="product-options">
-              <div><label for="productVariant">Pack size</label><select id="productVariant">
-                  <option value="0" disabled data-price="">১ কেজি — Unavailable</option>
-                </select></div>
-              <div class="qty-row">
-                <div><label for="productQty">Quantity</label><input id="productQty" type="number" min="1" max="99"
-                    value="1"></div>
-                <div class="d-grid align-content-end"><button id="productAdd"
-                    class="btn btn-primary btn-lg rounded-pill" type="button" data-add-to-cart data-product-id="g-068"
-                    data-variant-select="productVariant" data-qty-input="productQty">Add to cart <i
-                      class="bi bi-bag-plus"></i></button></div>
-              </div><button id="productBuy" class="btn btn-outline-primary btn-lg rounded-pill" type="button">Buy
-                now</button>
+
+        <div class="container">
+
+            <p class="breadcrumbs">
+                <a href="../../">Home</a> /
+                <a href="../../#categories">Categories</a> /
+                <a href="../../shop/category/girosto-special">Girosto Special</a> /
+                খাঁটি তালের গুঁড়
+            </p>
+
+            <div class="row g-5 align-items-start">
+
+                <div class="col-lg-6">
+
+                    <div class="product-gallery">
+
+                        <img
+                            class="product-image product-image-artwork"
+                            src="../../assets/img/product-fallback/jaggery.jpg"
+                            alt="Jaggery artwork for তালের গুঁড় (পাটালি)"
+                            decoding="async">
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6 product-info">
+
+                    <p class="product-category">
+                        Jaggery
+                    </p>
+
+                    <h1>
+                        <strong>খাঁটি তালের গুঁড় | Palm Jaggery | Girosto</strong>
+                    </h1>
+
+                    <p class="product-sku">
+                        SKU: GIR-068
+                    </p>
+
+                    <p>
+                        তালগাছ থেকে নামানো রসের নিজস্ব একটি ঘ্রাণ আছে। সেই রস ধীরে ধীরে জ্বাল দিলে তৈরি হয় গাঢ় রঙের, মাটি-মাটি সুবাসের এক মিষ্টি উপকরণ — তালের গুঁড়। দেখতে সুন্দর করার জন্য অনেক জায়গায় গুঁড়ে ব্লিচিং বা চিনি মেশানোর অভিযোগ শোনা যায়। তাই
+                        <a href="https://www.girosto.com/">গিরস্ত</a>
+                        বেছে নিয়েছে সহজ পথ: শুধু তালের রস, ঘরোয়া জ্বালে, কোনো কেমিক্যাল বা ভেজাল ছাড়া।
+                    </p>
+
+                    <p>
+                        তালের গুঁড় গ্রামবাংলার পুরোনো স্বাদের অংশ। পায়েস, পিঠা কিংবা এক কাপ চায়ে চিনির জায়গায় এর ব্যবহার অনেক পরিবারেই চলে আসছে বহু বছর ধরে। যাঁরা রিফাইন্ড চিনির বদলে প্রাকৃতিক, কম প্রক্রিয়াজাত মিষ্টি খুঁজছেন, তাঁদের রান্নাঘরে এটি হতে পারে একটি নির্ভরযোগ্য সংযোজন।
+                    </p>
+
+
+                    <div class="product-meta-grid">
+
+                        <div class="product-meta-card">
+                            <span>
+                                <strong>পণ্যের নাম:</strong>
+                                তালের গুঁড়
+                            </span>
+                        </div>
+
+                        <div class="product-meta-card">
+                            <span>
+                                <strong>ধরন:</strong>
+                                Homemade Palm Jaggery (Taler Gur)
+                            </span>
+                        </div>
+
+                        <div class="product-meta-card">
+                            <span>
+                                <strong>প্রস্তুতপ্রণালী:</strong>
+                                খাঁটি তালের রস জ্বাল দিয়ে ঘরে তৈরি
+                            </span>
+                        </div>
+
+                        <div class="product-meta-card">
+                            <span>
+                                <strong>ভেজাল/মিশ্রণ:</strong>
+                                নেই
+                            </span>
+                        </div>
+
+                        <div class="product-meta-card">
+                            <span>
+                                <strong>কেমিক্যাল/ব্লিচিং:</strong>
+                                নেই
+                            </span>
+                        </div>
+
+                        <div class="product-meta-card">
+                            <span>
+                                <strong>ব্যবহার:</strong>
+                                চা, পায়েস, পিঠা, মিষ্টান্ন ও রোজকার রান্নায়
+                            </span>
+                        </div>
+
+                        <div class="product-meta-card">
+                            <span>
+                                <strong>বিক্রেতা:</strong>
+                                গিরস্ত –
+                                <a href="https://www.girosto.com/shop/category/girosto-special">
+                                    Girosto Special
+                                </a>
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRICE CARD KEPT UNCHANGED -->
+
+                    <p id="productPrice" class="product-price">
+                        Currently unavailable
+                    </p>
+
+                    <div class="product-options">
+
+                        <div>
+
+                            <label for="productVariant">
+                                Pack size
+                            </label>
+
+                            <select id="productVariant">
+
+                                <option
+                                    value="0"
+                                    disabled
+                                    data-price="">
+                                    ১ কেজি — Unavailable
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="qty-row">
+
+                            <div>
+
+                                <label for="productQty">
+                                    Quantity
+                                </label>
+
+                                <input
+                                    id="productQty"
+                                    type="number"
+                                    min="1"
+                                    max="99"
+                                    value="1">
+
+                            </div>
+
+
+                            <div class="d-grid align-content-end">
+
+                                <button
+                                    id="productAdd"
+                                    class="btn btn-primary btn-lg rounded-pill"
+                                    type="button"
+                                    data-add-to-cart
+                                    data-product-id="g-068"
+                                    data-variant-select="productVariant"
+                                    data-qty-input="productQty">
+
+                                    Add to cart
+
+                                    <i class="bi bi-bag-plus"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            id="productBuy"
+                            class="btn btn-outline-primary btn-lg rounded-pill"
+                            type="button">
+
+                            Buy now
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="product-benefits">
+
+                        <div>
+                            <i class="bi bi-patch-check"></i>
+                            Carefully selected
+                        </div>
+
+                        <div>
+                            <i class="bi bi-box-seam"></i>
+                            Thoughtfully packed
+                        </div>
+
+                        <div>
+                            <i class="bi bi-truck"></i>
+                            Delivery support
+                        </div>
+
+                    </div>
+
+                    <p class="checkout-note mt-4">
+                        Product availability, appearance, and delivery time may vary. Contact Girosto if you need sourcing or ingredient details.
+                    </p>
+
+                </div>
+
             </div>
-            <div class="product-benefits">
-              <div><i class="bi bi-patch-check"></i>Carefully selected</div>
-              <div><i class="bi bi-box-seam"></i>Thoughtfully packed</div>
-              <div><i class="bi bi-truck"></i>Delivery support</div>
-            </div>
-            <p class="checkout-note mt-4">Product availability, appearance, and delivery time may vary. Contact Girosto
-              if you need sourcing or ingredient details.</p>
-          </div>
+
         </div>
-      </div>
+
     </section>
+
+
+
+    <section class="product-content">
+
+        <div class="container">
+
+
+            <div class="content-section">
+
+                <h2>
+                    <strong>গিরস্তের তালের গুঁড় কেন বেছে নেবেন?</strong>
+                </h2>
+
+                <p>
+                    বাজারে "খাঁটি" লেখা অনেক গুঁড়ই পাওয়া যায়, কিন্তু লেবেল দেখে ভরসা করা কঠিন। গিরস্তের তালের গুঁড়ে চেষ্টা করা হয়েছে প্রক্রিয়া ও উপাদান যতটা সম্ভব সরল রাখার, যাতে আপনি নিশ্চিন্তে পরিবারের রান্নাঘরে ব্যবহার করতে পারেন।
+                </p>
+
+                <ul>
+
+                    <li>
+                        <strong>শুধু তালের রস থেকে তৈরি:</strong>
+                        রস জ্বাল দিয়ে ঘন করেই গুঁড় বানানো হয়।
+                    </li>
+
+                    <li>
+                        <strong>ভেজালমুক্ত:</strong>
+                        ওজন বাড়াতে চিনি, চুন বা অন্য কিছু মেশানো হয় না।
+                    </li>
+
+                    <li>
+                        <strong>ব্লিচিং কেমিক্যাল নেই:</strong>
+                        রং ফর্সা দেখানোর জন্য কোনো রাসায়নিক ব্যবহার করা হয় না।
+                    </li>
+
+                    <li>
+                        <strong>নিজস্ব রং ও ঘ্রাণ অটুট:</strong>
+                        প্রাকৃতিক তালের গুঁড় সাধারণত গাঢ় বাদামি হয় এবং এর সুবাসও আলাদা। ধবধবে ফর্সা রং এখানে প্রত্যাশিত নয়।
+                    </li>
+
+                    <li>
+                        <strong>ঘরোয়া পদ্ধতিতে জ্বাল:</strong>
+                        বড় কারখানার বদলে পরিচিত ঐতিহ্যবাহী প্রক্রিয়ায় তৈরি।
+                    </li>
+
+                    <li>
+                        <strong>একাধিক কাজে ব্যবহারযোগ্য:</strong>
+                        চা থেকে পায়েস, পিঠা থেকে মিষ্টি রান্না — সবখানেই মানানসই।
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="content-section">
+
+                <h2>
+                    <strong>তালের গুঁড় কী?</strong>
+                </h2>
+
+                <p>
+                    তালের গুঁড় (Palm Jaggery বা Taler Gur) তালগাছের রস সংগ্রহ করে তা জ্বাল দিয়ে ঘন করে বানানো একটি প্রাকৃতিক মিষ্টি। আখের গুঁড় বা খেজুরের গুঁড়ের মতোই এটি চিনির ঐতিহ্যবাহী বিকল্প, তবে উৎস আলাদা হওয়ায় স্বাদ ও গন্ধেও পার্থক্য আছে। তালের গুঁড়ে সাধারণত একটু গভীর, কিছুটা ধোঁয়াটে-ক্যারামেল ধাঁচের মিষ্টতা পাওয়া যায়।
+                </p>
+
+                <p>
+                    পরিশোধিত চিনির তুলনায় কম প্রক্রিয়াজাত হওয়ায় এতে প্রাকৃতিকভাবে কিছু খনিজ উপাদান থেকে যেতে পারে।
+                </p>
+
+
+                <h3>
+                    <strong>তালের গুঁড়ের পুষ্টিগত বৈশিষ্ট্য</strong>
+                </h3>
+
+                <p>
+                    তালের গুঁড়ে সাধারণত আয়রন, ক্যালসিয়াম, পটাশিয়াম ও ম্যাগনেসিয়ামের মতো কিছু খনিজ অল্প পরিমাণে থাকে বলে ধারণা করা হয়। তবে এটি মূলত একটি মিষ্টি উপাদান। ল্যাব রিপোর্ট ছাড়া নির্দিষ্ট পুষ্টিমান নিশ্চিত করে বলা ঠিক নয়, এবং পরিমিত পরিমাণে খাওয়াই সবচেয়ে ভালো।
+                </p>
+
+
+                <h3>
+                    <strong>গিরস্তের তালের গুঁড়ের সুবিধা</strong>
+                </h3>
+
+                <p>
+                    রোজকার রান্না ও মিষ্টি খাবারে প্রক্রিয়াজাত চিনির একটি সহজ বিকল্প হিসেবে তালের গুঁড় ব্যবহার করা যায়।
+                </p>
+
+                <p>
+                    <strong>১. রিফাইন্ড চিনির চেয়ে কম প্রক্রিয়াজাত</strong>
+                </p>
+
+                <p>
+                    রস জ্বাল দিয়ে তৈরি হওয়ায় চিনি কারখানার মতো ধাপে ধাপে পরিশোধনের প্রক্রিয়া এতে থাকে না।
+                </p>
+
+                <p>
+                    <strong>২. প্রাকৃতিক খনিজ উপাদানের সম্ভাবনা</strong>
+                </p>
+
+                <p>
+                    আয়রন ও ক্যালসিয়ামের মতো কিছু খনিজ অল্প পরিমাণে থেকে যেতে পারে।
+                </p>
+
+                <p>
+                    <strong>৩. অনন্য স্বাদ</strong>
+                </p>
+
+                <p>
+                    তালের গুঁড় খাবারে একটি আলাদা গভীরতা আনে, যা সাধারণ চিনিতে পাওয়া যায় না।
+                </p>
+
+                <p>
+                    <strong>৪. ঐতিহ্যবাহী খাবারের উপযোগী</strong>
+                </p>
+
+                <p>
+                    তালের ক্ষীর, তালের বড়া ও বিভিন্ন দেশি পিঠা-পায়েসের সঙ্গে এর স্বাদ চমৎকার মানায়।
+                </p>
+
+                <p>
+                    <strong>৫. চা ও পানীয়তে নতুন অভিজ্ঞতা</strong>
+                </p>
+
+                <p>
+                    চিনির বদলে গুঁড় দিয়ে চা বানালে স্বাদে ভিন্নতা আসে।
+                </p>
+
+
+                <h3>
+                    <strong>তালের গুঁড় কীভাবে ব্যবহার করবেন?</strong>
+                </h3>
+
+                <p>
+                    তালের গুঁড় পিঠা, পায়েস, পুডিং ও নানা মিষ্টি খাবারে ব্যবহার করে স্বাদ ও মিষ্টতা বাড়াতে পারেন।
+                </p>
+
+                <ul>
+
+                    <li>
+                        চায়ে চিনির বদলে সরাসরি মিশিয়ে নিতে পারেন।
+                    </li>
+
+                    <li>
+                        পায়েস, ক্ষীর বা হালুয়ায় গলিয়ে দিলে মিষ্টির সঙ্গে সুন্দর সুবাস যোগ হয়।
+                    </li>
+
+                    <li>
+                        তালের বড়া বা অন্যান্য পিঠার মিশ্রণে প্রয়োজনমতো ব্যবহার করুন।
+                    </li>
+
+                    <li>
+                        রান্নায় হালকা মিষ্টতা ও গভীর স্বাদ আনতে সামান্য পরিমাণ দিতে পারেন।
+                    </li>
+
+                    <li>
+                        ছোট টুকরা করে সরাসরিও খাওয়া যায়।
+                    </li>
+
+                    <li>
+                        গলানোর সময় অল্প পানি দিয়ে মৃদু আঁচে জ্বাল দিলে সহজে গলে যায়।
+                    </li>
+
+                </ul>
+
+
+                <h3>
+                    <strong>সংরক্ষণের নিয়ম</strong>
+                </h3>
+
+                <p>
+                    ঠিকমতো সংরক্ষণ করলে গুঁড়ের স্বাদ ও মান অনেক দিন ভালো থাকে।
+                </p>
+
+                <ul>
+
+                    <li>
+                        বায়ুরোধী পাত্রে রাখুন।
+                    </li>
+
+                    <li>
+                        সরাসরি রোদ ও স্যাঁতসেঁতে জায়গা থেকে দূরে রাখুন।
+                    </li>
+
+                    <li>
+                        শুকনো ও ঠান্ডা স্থান বেছে নিন।
+                    </li>
+
+                    <li>
+                        গরম ও আর্দ্র আবহাওয়ায় গুঁড় নরম হয়ে যেতে পারে, তাই ব্যবহারের পর পাত্রের মুখ ভালোভাবে বন্ধ করুন।
+                    </li>
+
+                    <li>
+                        প্যাকেটে উল্লেখিত মেয়াদের মধ্যে ব্যবহার করুন।
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="content-section">
+
+                <h3>
+                    <strong>তালের গুঁড় Specification</strong>
+                </h3>
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered product-spec-table">
+
+                        <tr>
+
+                            <td>
+                                <p><strong>বিষয়</strong></p>
+                            </td>
+
+                            <td>
+                                <p><strong>বিস্তারিত</strong></p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>পণ্যের নাম</p>
+                            </td>
+
+                            <td>
+                                <p>তালের গুঁড়</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>Product Type</p>
+                            </td>
+
+                            <td>
+                                <p>Palm Jaggery (Taler Gur)</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>প্রস্তুতপ্রণালী</p>
+                            </td>
+
+                            <td>
+                                <p>খাঁটি তালের রস জ্বাল দিয়ে ঘরে তৈরি</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>ভেজাল/মিশ্রণ</p>
+                            </td>
+
+                            <td>
+                                <p>যোগ করা হয় না</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>কেমিক্যাল/ব্লিচিং</p>
+                            </td>
+
+                            <td>
+                                <p>নেই</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>সম্ভাব্য খনিজ উপাদান</p>
+                            </td>
+
+                            <td>
+                                <p>আয়রন, ক্যালসিয়াম, পটাশিয়াম (স্বল্প পরিমাণে)</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>ব্যবহার</p>
+                            </td>
+
+                            <td>
+                                <p>চা, পায়েস, পিঠা, মিষ্টান্ন, রোজকার রান্না</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>Storage</p>
+                            </td>
+
+                            <td>
+                                <p>ঠান্ডা ও শুকনো স্থানে, বায়ুরোধী পাত্রে</p>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                <p>বিক্রেতা</p>
+                            </td>
+
+                            <td>
+                                <p>Girosto – গিরস্ত</p>
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="section-space category-faq-section">
+
+        <div class="container">
+
+            <div class="faq-heading text-center mx-auto">
+
+                <h2 class="section-title">
+                    <strong>FAQs about তালের গুঁড়</strong>
+                </h2>
+
+            </div>
+
+
+            <div class="faq-accordion-wrap mx-auto">
+
+                <div
+                    class="accordion accordion-flush"
+                    id="palmJaggeryFaqAcc">
+
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#palmJaggeryFaq1"
+                                aria-expanded="false"
+                                aria-controls="palmJaggeryFaq1">
+
+                                <strong>
+                                    তালের গুঁড় কী দিয়ে তৈরি?
+                                </strong>
+
+                            </button>
+
+                        </h3>
+
+                        <div
+                            id="palmJaggeryFaq1"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#palmJaggeryFaqAcc">
+
+                            <div class="accordion-body">
+                                গিরস্তের তালের গুঁড় তৈরি হয় তালের রস জ্বাল দিয়ে ঘন করে। এতে কোনো কেমিক্যাল বা ভেজাল মেশানো হয় না।
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#palmJaggeryFaq2"
+                                aria-expanded="false"
+                                aria-controls="palmJaggeryFaq2">
+
+                                <strong>
+                                    গিরস্তের তালের গুঁড়ে কি চিনি বা অন্য কিছু মেশানো থাকে?
+                                </strong>
+
+                            </button>
+
+                        </h3>
+
+                        <div
+                            id="palmJaggeryFaq2"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#palmJaggeryFaqAcc">
+
+                            <div class="accordion-body">
+                                না। ওজন বা রং বাড়ানোর জন্য চিনি, চুন বা কোনো রাসায়নিক উপাদান যোগ করা হয় না।
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#palmJaggeryFaq3"
+                                aria-expanded="false"
+                                aria-controls="palmJaggeryFaq3">
+
+                                <strong>
+                                    তালের গুঁড় ও খেজুরের গুঁড়ের মধ্যে পার্থক্য কী?
+                                </strong>
+
+                            </button>
+
+                        </h3>
+
+                        <div
+                            id="palmJaggeryFaq3"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#palmJaggeryFaqAcc">
+
+                            <div class="accordion-body">
+                                দুটোই প্রাকৃতিক মিষ্টি, কিন্তু উৎস আলাদা। তালের গুঁড় তালগাছের রস থেকে, আর খেজুরের গুঁড় খেজুরগাছের রস থেকে বানানো হয়। এ কারণে স্বাদ, গন্ধ ও রঙে কিছুটা তফাত থাকে।
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#palmJaggeryFaq4"
+                                aria-expanded="false"
+                                aria-controls="palmJaggeryFaq4">
+
+                                <strong>
+                                    তালের গুঁড় ও আখের গুঁড়ের মধ্যে তফাত কোথায়?
+                                </strong>
+
+                            </button>
+
+                        </h3>
+
+                        <div
+                            id="palmJaggeryFaq4"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#palmJaggeryFaqAcc">
+
+                            <div class="accordion-body">
+                                আখের গুঁড় আসে আখের রস থেকে, তালের গুঁড় আসে তালের রস থেকে। আখের গুঁড়ে সাধারণত হালকা ক্যারামেলের মতো স্বাদ থাকে, আর তালের গুঁড়ে থাকে তুলনামূলক গাঢ় ও মাটি-মাটি সুবাস।
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#palmJaggeryFaq5"
+                                aria-expanded="false"
+                                aria-controls="palmJaggeryFaq5">
+
+                                <strong>
+                                    তালের গুঁড় কি প্রতিদিন খাওয়া যাবে?
+                                </strong>
+
+                            </button>
+
+                        </h3>
+
+                        <div
+                            id="palmJaggeryFaq5"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#palmJaggeryFaqAcc">
+
+                            <div class="accordion-body">
+                                অনেকেই অল্প পরিমাণে নিয়মিত ব্যবহার করেন। তবে এটি একটি মিষ্টি উপকরণ, তাই পরিমিত খাওয়াই ভালো। ডায়াবেটিস বা অন্য কোনো শারীরিক সমস্যা থাকলে ব্যবহারের আগে চিকিৎসক বা পুষ্টিবিদের পরামর্শ নিন।
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#palmJaggeryFaq6"
+                                aria-expanded="false"
+                                aria-controls="palmJaggeryFaq6">
+
+                                <strong>
+                                    তালের গুঁড় গলে গেলে কী করব?
+                                </strong>
+
+                            </button>
+
+                        </h3>
+
+                        <div
+                            id="palmJaggeryFaq6"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#palmJaggeryFaqAcc">
+
+                            <div class="accordion-body">
+                                গরমে বা আর্দ্র আবহাওয়ায় গুঁড় নরম হয়ে যাওয়া স্বাভাবিক। বায়ুরোধী পাত্রে শুকনো ও ঠান্ডা জায়গায় রাখলে এমনটা কম হয়।
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="accordion-item">
+
+                        <h3 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#palmJaggeryFaq7"
+                                aria-expanded="false"
+                                aria-controls="palmJaggeryFaq7">
+
+                                <strong>
+                                    তালের গুঁড় কীভাবে সংরক্ষণ করব?
+                                </strong>
+
+                            </button>
+
+                        </h3>
+
+                        <div
+                            id="palmJaggeryFaq7"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#palmJaggeryFaqAcc">
+
+                            <div class="accordion-body">
+                                বাতাস ঢোকে না এমন পাত্রে রেখে রোদ ও ভেজা পরিবেশ থেকে দূরে, শুকনো ও ঠান্ডা স্থানে রাখুন।
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
   </main><!-- shared:footer:start -->
   <footer class="site-footer">
     <div class="container">
