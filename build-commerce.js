@@ -97,7 +97,7 @@ for(const category of catalog.categories){
 
 const productDir=path.join(root,"shop","product");fs.mkdirSync(productDir,{recursive:true});
 for(const filename of fs.readdirSync(productDir)){if(/^g-\d+(?:-\d+)?\.html$/i.test(filename))fs.unlinkSync(path.join(productDir,filename));}
-const migratedProductFiles=["fenugreek-powder","palmyra-patali-jaggery","virgin-cold-pressed-mustard-oil","premium-clone-tea","rakhi-mustard-oil","rolled-oats","meat-masala","biryani-masala","hand-roasted-red-puffed-rice","mushroom-masala","thai-mushroom-soup","mushroom-corn-soup","aman-red-flattened-rice","traditional-milk-cream-ghee","turmeric-powder","chilli-powder","roasted-cumin-powder","coriander-powder","hand-roasted-vermicelli","handmade-cane-sugar","green-tea","shrimp-balachao","coconut-oil-hair-care","garlic-pickle","black-gram-flour","blackseed-oil","pink-salt-powder-and-stone"];
+const migratedProductFiles=["chickpea-flour","fenugreek-powder","palmyra-patali-jaggery","virgin-cold-pressed-mustard-oil","premium-clone-tea","rakhi-mustard-oil","rolled-oats","meat-masala","biryani-masala","hand-roasted-red-puffed-rice","mushroom-masala","thai-mushroom-soup","mushroom-corn-soup","aman-red-flattened-rice","traditional-milk-cream-ghee","turmeric-powder","chilli-powder","roasted-cumin-powder","coriander-powder","hand-roasted-vermicelli","handmade-cane-sugar","green-tea","shrimp-balachao","coconut-oil-hair-care","garlic-pickle","black-gram-flour","blackseed-oil","pink-salt-powder-and-stone"];
 for(const slug of migratedProductFiles){const legacyFile=path.join(productDir,`${slug}.html`);if(fs.existsSync(legacyFile))fs.unlinkSync(legacyFile);}
 const preservedProductPageIds=new Set(["g-163","g-068","g-031","g-071","g-115","g-196"]);
 const noIndexProductPageIds=new Set(["g-122","g-084","g-190","g-062","g-082","g-071","g-064"]);
@@ -107,10 +107,10 @@ for(const item of products){
   if(preservedProductPageIds.has(item.id)&&fs.existsSync(productFile))continue;
   const shopHref=productPath.startsWith("shop/product/")?"../":"../../shop/";
   const categoryHref=productPath.startsWith("shop/product/")?`../category/${item.categoryFile}`:`../../shop/category/${item.categoryFile}`;
-  const breadcrumbShopHref=item.id==="g-163"?"../../#categories":shopHref;
-  const breadcrumbShopName=item.id==="g-163"?"Categories":"Shop";
-  const breadcrumbCategoryHref=item.id==="g-163"?"../../shop/category/girosto-special":categoryHref;
-  const breadcrumbCategoryName=item.id==="g-163"?"Girosto Special":item.categoryName;
+  const breadcrumbShopHref=(item.id==="g-163"||item.id==="g-113")?"../../#categories":shopHref;
+  const breadcrumbShopName=(item.id==="g-163"||item.id==="g-113")?"Categories":"Shop";
+  const breadcrumbCategoryHref=(item.id==="g-163"||item.id==="g-113")?"../../shop/category/girosto-special":categoryHref;
+  const breadcrumbCategoryName=(item.id==="g-163"||item.id==="g-113")?"Girosto Special":item.categoryName;
   const optionsHtml=item.variants.map((variant,index)=>`<option value="${index}" ${variant.price===null?"disabled":""} data-price="${variant.price??""}">${esc(variant.size)} — ${variant.price===null?"Unavailable":money(variant.price)}</option>`).join("");
   const start=Math.max(firstAvailable(item),0),startVariant=item.variants[start];
   const gallery=item.images.length?item.images.map(image=>`<img class="product-image" src="../../${esc(image)}" alt="${esc(item.name)}" decoding="async">`).join(""):`<img class="product-image product-image-artwork" src="../../${esc(categoryImages[item.category])}" alt="${esc(`${item.categoryName} artwork for ${item.name}`)}" decoding="async">`;
