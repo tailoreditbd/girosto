@@ -26,9 +26,13 @@ RewriteRule ^blog/organic-food-ki-shotti-safe-food-bangladesh(?:\.html)?$ blog/o
 RewriteRule ^categories/girosto-special/ready-halim-mix(?:\.html)?$ catagories/girosto-special/ready-halim-mix [R=301,L,NE,NC]
 RewriteRule ^shop/product/ready-halim-mix(?:\.html)?$ catagories/girosto-special/ready-halim-mix [R=301,L,NE,NC]
 
+# Preserve earlier cane sugar paths.
+RewriteCond %{REQUEST_URI} ^(.*)/catagories/girosto-special/handmade-cane-sugar(?:\.html)?$ [NC]
+RewriteRule ^catagories/girosto-special/handmade-cane-sugar(?:\.html)?$ %1/categories/girosto-special/handmade-cane-sugar [R=301,L,NE,NC]
+
 # Preserve the previous cane sugar URL.
 RewriteCond %{REQUEST_URI} ^(.*)/catagories/girosto-special/homemade-cane-sugar(?:\.html)?$ [NC]
-RewriteRule ^catagories/girosto-special/homemade-cane-sugar(?:\.html)?$ %1/catagories/girosto-special/handmade-cane-sugar [R=301,L,NE,NC]
+RewriteRule ^catagories/girosto-special/homemade-cane-sugar(?:\.html)?$ %1/categories/girosto-special/handmade-cane-sugar [R=301,L,NE,NC]
 
 # Permanently migrate selected product URLs directly to their final category paths.
 RewriteRule ^shop/product/chickpea-flour(?:\.html)?$ catagories/girosto-special/boot-er-daler-besan [R=301,L,NE,NC]
@@ -53,7 +57,7 @@ RewriteRule ^shop/product/chilli-powder(?:\.html)?$ catagories/ground-spices/pur
 RewriteRule ^shop/product/roasted-cumin-powder(?:\.html)?$ catagories/ground-spices/pure-cumin-powder [R=301,L,NE,NC]
 RewriteRule ^shop/product/coriander-powder(?:\.html)?$ catagories/ground-spices/pure-coriander-powder [R=301,L,NE,NC]
 RewriteRule ^shop/product/hand-roasted-vermicelli(?:\.html)?$ catagories/girosto-special/handmade-bogura-semai [R=301,L,NE,NC]
-RewriteRule ^shop/product/handmade-cane-sugar(?:\.html)?$ catagories/girosto-special/handmade-cane-sugar [R=301,L,NE,NC]
+RewriteRule ^shop/product/handmade-cane-sugar(?:\.html)?$ categories/girosto-special/handmade-cane-sugar [R=301,L,NE,NC]
 RewriteRule ^shop/product/green-tea(?:\.html)?$ catagories/girosto-special/green-tea [R=301,L,NE,NC]
 RewriteRule ^shop/product/shrimp-balachao(?:\.html)?$ catagories/girosto-special/homemade-chingri-balachao [R=301,L,NE,NC]
 RewriteRule ^shop/product/coconut-oil-hair-care(?:\.html)?$ catagories/girosto-special/hair-care-coconut-oil [R=301,L,NE,NC]
