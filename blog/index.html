@@ -5,7 +5,11 @@
   <base href="blog/">
   <script>
     // Keep relative assets correct at /blog, /blog/, and /blog/index.html.
-    document.querySelector("base").href = location.pathname.replace(/\/blog(?:\/index\.html)?\/?$/, "/blog/");
+    const blogPath = location.pathname.replace(/\/blog(?:\/index\.html)?\/?$/, "/blog");
+    document.querySelector("base").href = blogPath + "/";
+    if (location.pathname !== blogPath) {
+      history.replaceState(null, "", blogPath + location.search + location.hash);
+    }
   </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CJ8QNY3ZDX"></script>
