@@ -4,6 +4,12 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /girosto/
 
+# Serve the categories landing page even when the legacy directory exists.
+RewriteCond %{REQUEST_URI} ^(.*)/categories/$
+RewriteRule ^categories/$ %1/categories [R=301,L,NE]
+RewriteCond %{REQUEST_URI} ^(.*)/categories$
+RewriteRule ^categories$ %1/categories.html [END]
+
 # Blog routing uses the requested prefix on localhost and the live domain.
 RewriteCond %{REQUEST_URI} ^(.*)/blog/HealthyLivingBlogGirosto(?:\.html)?$ [NC]
 RewriteRule ^blog/HealthyLivingBlogGirosto(?:\.html)?$ %1/blog [R=301,L,NE,NC]

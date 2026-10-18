@@ -1,0 +1,2 @@
+# The landing page uses /categories without a trailing slash.
+DirectorySlash Off

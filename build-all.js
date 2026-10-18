@@ -2,6 +2,7 @@
 require("./build-shop-content");
 require("./build-category-content");
 require("./build-commerce");
+require("./build-categories-page");
 require("./build");
 require("./build-sitemap");
 
