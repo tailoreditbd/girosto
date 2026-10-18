@@ -153,6 +153,17 @@ button[aria-busy="true"]{cursor:wait;opacity:.72}
 @media(max-width:430px){
   .girosto-hero .hero-title{max-width:100%;font-size:2.35rem;letter-spacing:-.035em}
 }
+/* Keep both homepage slides at the same compact height. */
+.home-page .girosto-hero{height:560px;min-height:560px}
+.home-page .girosto-hero .hero-content{padding-top:2rem;padding-bottom:2rem}
+.home-page .girosto-hero .carousel-inner,
+.home-page .girosto-hero .carousel-item{height:496px!important;min-height:496px}
+.home-page .girosto-hero .carousel-indicators{bottom:12px}
+@media(max-width:767px){
+  .home-page .girosto-hero{height:580px;min-height:580px}
+  .home-page .girosto-hero .carousel-inner,
+  .home-page .girosto-hero .carousel-item{height:516px!important;min-height:516px}
+}
 /* Invoice, pantry caption, and logo correction */
 .home-page .site-header:not(.scrolled) .header-logo-light{filter:none}
 .intro-visual figcaption{position:relative;z-index:1;margin-top:1rem;color:var(--muted);font-size:.76rem;line-height:1.5}
