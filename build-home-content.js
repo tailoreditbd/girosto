@@ -13,6 +13,8 @@ function inject(name, fallbackPattern) {
 
 inject("home-categories", /<div id="categoryGrid" class="category-grid"><\/div>/i);
 inject("home-bestsellers", /<div id="bestSellerGrid" class="row g-4"><\/div>/i);
+inject("home-reasons", /<section class="section-space reasons-section">[\s\S]*?<\/section>/i);
+
 inject("home-faq", /<div class="accordion accordion-flush" id="faqAcc"><\/div>/i);
 
 fs.writeFileSync(indexFile, html, "utf8");
