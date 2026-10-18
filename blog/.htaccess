@@ -1,0 +1,2 @@
+# The parent rewrite serves this directory at /blog without a trailing slash.
+DirectorySlash Off

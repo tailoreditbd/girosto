@@ -4,8 +4,11 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /girosto/
 
-# Keep the blog index at the clean /blog/ URL.
-RewriteRule ^blog/HealthyLivingBlogGirosto(?:\.html)?$ blog/ [R=301,L,NE,NC]
+# Serve the blog without a trailing slash, before Apache's directory redirect.
+RewriteRule ^blog/HealthyLivingBlogGirosto(?:\.html)?$ blog [R=301,L,NE,NC]
+RewriteCond %{THE_REQUEST} \s/+[^?\s]*blog/(?:index\.html)?(?:[?\s]) [NC]
+RewriteRule ^blog/(?:index\.html)?$ blog [R=301,L,NE]
+RewriteRule ^blog$ blog/index.html [END]
 
 # Permanently migrate renamed blog posts to their new canonical URLs.
 RewriteRule ^blog/safe-agricultural-products-ki-bebostha-proyojon(?:\.html)?$ blog/safe-agricultural-products [R=301,L,NE,NC]
