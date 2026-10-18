@@ -108,6 +108,9 @@ html body main h3{font-size:24px!important}
 .category-faq-section .accordion-button{font-size:1.12rem!important}
 @media(max-width:767px){.intro-copy h1{font-size:34px!important}.intro-copy>p:not(.section-kicker){font-size:17px}}
 .home-copy-match,
+.home-page #faq .faq-heading > p:not(.section-kicker),
+.home-page #faq .accordion-body,
+.home-page #faq .accordion-button,
 #categories > .container > .section-lead,
 #bestsellers > .container > .section-lead,
 #new-arrivals .feature-copy > p:not(.section-kicker),
@@ -120,6 +123,8 @@ html body main h3{font-size:24px!important}
 }
 
 .home-page #categories > .container > .section-lead,
+.home-page #faq .faq-heading > p:not(.section-kicker),
+.home-page #faq .accordion-body,
 .home-page #bestsellers > .container > .section-lead,
 .home-page #new-arrivals .feature-copy > p:not(.section-kicker) {
   font-family: inherit;
