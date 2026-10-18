@@ -119,6 +119,14 @@ html body main h3{font-size:24px!important}
   font-weight: 400 !important;
 }
 
+.home-page #categories > .container > .section-lead,
+.home-page #bestsellers > .container > .section-lead,
+.home-page #new-arrivals .feature-copy > p:not(.section-kicker) {
+  font-family: inherit;
+  font-style: normal;
+  color: inherit;
+}
+
 #categories > .container > .section-lead strong,
 #categories > .container > .section-lead b,
 #bestsellers > .container > .section-lead strong,
