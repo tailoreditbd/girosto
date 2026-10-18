@@ -11,7 +11,7 @@ const shared = {
 
 function pageRoot(file) {
   const relative = path.relative(path.dirname(file), root).replaceAll("\\", "/");
-  return relative ? `${relative}/` : "";
+  return relative ? `${relative}/` : "./";
 }
 
 function render(text, prefix) {
